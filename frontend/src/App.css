@@ -1,56 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --brown: #4c2719;
+  --button1: #ede580;
+  --button2: #a4af69;
+  --button3: #d35269;
+  --Primaire: #ffe0b5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	min-width: 100%;
+	background-color: var(--background-color);
+	color: var(--font-color);
+	font-size: medium;
+	font-family: var(--font);
+} */
+
+h1 {
+  font-size: x-large;
+}
+
+h2 {
+  font-size: large;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: medium;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.grosBouton {
+  height: 7rem;
+  width: 21rem;
+  border-radius: 54.5px;
+  background-color: #ffe0b5;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.petitBouton {
+  height: 3.5rem;
+  width: 11rem;
+  border-radius: 54.5px;
+  background-color: #ffe0b5;
+  font-size: 1.5rem;
+  opacity: 0.8;
 }
 
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
+  gap: 5rem;
 }
