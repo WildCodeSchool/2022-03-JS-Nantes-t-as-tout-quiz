@@ -12,17 +12,6 @@
   box-sizing: border-box;
 }
 
-/* body {
-	margin: 0;
-	padding: 0;
-	min-height: 100%;
-	min-width: 100%;
-	background-color: var(--background-color);
-	color: var(--font-color);
-	font-size: medium;
-	font-family: var(--font);
-} */
-
 h1 {
   font-size: x-large;
 }
