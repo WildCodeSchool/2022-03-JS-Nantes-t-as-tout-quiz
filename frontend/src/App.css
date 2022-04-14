@@ -1,16 +1,16 @@
 :root {
-  --secondaryColor: #4c2719;
-  --button1: #ede580;
-  --button2: #a4af69;
-  --button3: #d35269;
-  --primarColor: #ffe0b5;
+  --brown: #4c2719;
+  --yellow: #ede580;
+  --green: #a4af69;
+  --red: #d35269;
+  --beige: #ffe0b5;
 }
 
 .bigButton {
   height: 7rem;
   width: 21rem;
   border-radius: 54.5px;
-  background-color: var(--primarColor);
+  background-color: var(--beige);
   font-size: 3rem;
   opacity: 0.8;
 }
@@ -19,7 +19,7 @@
   height: 3.5rem;
   width: 11rem;
   border-radius: 54.5px;
-  background-color: var(--primarColor);
+  background-color: var(--beige);
   font-size: 1.5rem;
   opacity: 0.8;
 }
