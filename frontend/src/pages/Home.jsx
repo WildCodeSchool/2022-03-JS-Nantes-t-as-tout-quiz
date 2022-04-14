@@ -13,9 +13,9 @@ function Home() {
         backgroundSize: "cover",
       }}
     >
-      <Bouton name="Règles" className="petitBouton" />
-      <Bouton name="JOUER" className="grosBouton" />
-      <Bouton name="Contact" className="petitBouton" />
+      <Bouton name="Règles" className="smallButton" />
+      <Bouton name="JOUER" className="bigButton" />
+      <Bouton name="Contact" className="smallButton" />
     </div>
   );
 }

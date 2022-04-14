@@ -1,51 +1,25 @@
 :root {
-  --brown: #4c2719;
+  --secondaryColor: #4c2719;
   --button1: #ede580;
   --button2: #a4af69;
   --button3: #d35269;
-  --Primaire: #ffe0b5;
+  --primarColor: #ffe0b5;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-h1 {
-  font-size: x-large;
-}
-
-h2 {
-  font-size: large;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  font-size: medium;
-}
-
-a {
-  text-decoration: none;
-  color: var(--font-color);
-}
-
-.grosBouton {
+.bigButton {
   height: 7rem;
   width: 21rem;
   border-radius: 54.5px;
-  background-color: #ffe0b5;
+  background-color: var(--primarColor);
   font-size: 3rem;
   opacity: 0.8;
 }
 
-.petitBouton {
+.smallButton {
   height: 3.5rem;
   width: 11rem;
   border-radius: 54.5px;
-  background-color: #ffe0b5;
+  background-color: var(--primarColor);
   font-size: 1.5rem;
   opacity: 0.8;
 }
