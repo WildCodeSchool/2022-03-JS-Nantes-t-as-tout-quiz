@@ -6,27 +6,24 @@
   --beige: #ffe0b5;
 }
 
-.bigButton {
-  height: 7rem;
-  width: 21rem;
-  border-radius: 54.5px;
-  background-color: var(--beige);
-  font-size: 3rem;
-  opacity: 0.8;
-}
+/* Header */
 
-.smallButton {
-  height: 3.5rem;
-  width: 11rem;
-  border-radius: 54.5px;
-  background-color: var(--beige);
-  font-size: 1.5rem;
-  opacity: 0.8;
-}
-
-.App {
+nav {
   display: flex;
-  flex-flow: column nowrap;
   align-items: center;
-  gap: 5rem;
+  background-color: #4c2719;
+}
+
+nav img {
+  height: 5rem;
+  margin: 1rem;
+  transform: scaleX(-1);
+}
+
+nav h1 {
+  color: #ffe0b5;
+  text-align: center;
+  width: 100%;
+  font-family: cursive;
+  font-size: 2.5rem;
 }
