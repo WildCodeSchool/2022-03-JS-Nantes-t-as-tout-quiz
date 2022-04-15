@@ -3,7 +3,7 @@ import Bouton from "@components/Bouton";
 import "../App.css";
 import prairie from "@assets/prairieChampignons.jpg";
 
-function Home() {
+export default function Home() {
   return (
     <div
       className="App"
@@ -19,5 +19,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
