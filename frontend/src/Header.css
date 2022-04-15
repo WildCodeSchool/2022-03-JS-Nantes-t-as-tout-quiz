@@ -1,27 +1,13 @@
-body {
-  margin: 0;
-}
-
-:root {
-  --brown: #4c2719;
-  --yellow: #ede580;
-  --green: #a4af69;
-  --red: #d35269;
-  --beige: #ffe0b5;
-}
-
 /* Header */
 
 nav {
   display: flex;
   align-items: center;
   background-color: #4c2719;
-  text-align: center;
-  gap: 5rem;
 }
 
 nav img {
-  height: 5rem;
+  height: 4rem;
   margin: 1rem;
   transform: scaleX(-1);
 }
@@ -31,5 +17,6 @@ nav h1 {
   text-align: center;
   width: 100%;
   font-family: cursive;
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
+

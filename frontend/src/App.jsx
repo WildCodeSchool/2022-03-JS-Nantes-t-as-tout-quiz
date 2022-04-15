@@ -1,15 +1,19 @@
 /* eslint-disable import/no-unresolved */
-import Home from "@pages/Home";
 import Header from "@components/Header";
+import Home from "@pages/Home";
+import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
 import "./Accueil.css";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Header />
-      <Home />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 
