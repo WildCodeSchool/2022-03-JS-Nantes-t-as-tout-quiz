@@ -3,7 +3,7 @@
 nav {
   display: flex;
   align-items: center;
-  background-color: #4c2719;
+  background-color: var(--brown);
 }
 
 nav img {
@@ -13,10 +13,9 @@ nav img {
 }
 
 nav h1 {
-  color: #ffe0b5;
+  color: var(--beige);
   text-align: center;
   width: 100%;
   font-family: cursive;
   font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
-
