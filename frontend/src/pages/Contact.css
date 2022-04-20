@@ -20,7 +20,9 @@ form {
   opacity: 0.9;
 }
 
-.inputClass, select, textarea {
+.inputClass,
+select,
+textarea {
   border-radius: 8px;
   border: none;
   width: 25rem;
