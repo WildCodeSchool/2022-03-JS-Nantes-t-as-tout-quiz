@@ -1,7 +1,9 @@
 /* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
+import CountdownTimer from "@components/CountdownTimer";
 import "../App.css";
-import "../Accueil.css";
+import "./Home.css";
+import "../components/countdown.css";
 import prairie from "@assets/prairieChampignons.jpg";
 import cascade from "@assets/cascade_eau.jpg";
 import parc from "@assets/parc_sous_pluie.jpg";
@@ -9,12 +11,12 @@ import pont from "@assets/pont_tronc_arbre.jpg";
 import lac from "@assets/lac_ponton.jpg";
 import mongolfiere from "@assets/mongolfieres.jpg";
 import pontSousBois from "@assets/pont_sous_bois.jpg";
-// import montagnes from "@assets/montagnes_moulin.jpg";
 import prairieFleurie from "@assets/prairie_fleurie.jpg";
 import prairie2 from "@assets/prairie.jpg";
 import montagnesMaison from "@assets/montagnes_maison.jpg";
 
 let background = 0;
+const NOW_IN_MS = new Date().getTime();
 
 // function debut à refactoriser
 // eslint-disable-next-line consistent-return
@@ -63,9 +65,12 @@ function Home() {
         backgroundPosition: "center",
       }}
     >
+      <div>
+        <CountdownTimer className="countdown" targetDate={NOW_IN_MS * 60} />
+      </div>
       <div
         style={{
-          marginTop: "150px",
+          marginTop: "50px",
           display: "flex",
           flexFlow: "column nowrap",
           alignItems: "center",
