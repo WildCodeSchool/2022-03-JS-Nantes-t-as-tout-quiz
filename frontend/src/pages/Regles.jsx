@@ -29,7 +29,7 @@ export default function Regles() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
           corrupti obcaecati molestiae enim iusto ducimus necessitatibus optio
           temporibus inventore quod sunt omnis deleniti sit, aspernatur atque
-          non maxime laudantium accusamus?
+          non maxime laudantium accusamus
         </p>
       </div>
     </div>
