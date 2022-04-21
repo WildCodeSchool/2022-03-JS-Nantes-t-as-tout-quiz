@@ -10,7 +10,6 @@ import prairie from "@assets/prairieChampignons.jpg";
 function Home() {
   return (
     <div
-      className="App"
       style={{
         backgroundImage: `url(${prairie})`,
         height: "50rem",
