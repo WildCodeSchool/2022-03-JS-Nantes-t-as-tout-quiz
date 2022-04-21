@@ -5,6 +5,7 @@ import "../App.css";
 import "./Home.css";
 import "../components/countdown.css";
 import prairie from "@assets/prairieChampignons.jpg";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line consistent-return
 function Home() {
@@ -29,9 +30,13 @@ function Home() {
           gap: "5rem",
         }}
       >
-        <Bouton name="Règles" className="smallButton" />
+        <Link to="/Regles">
+          <Bouton name="Règles" className="smallButton" />
+        </Link>
         <Bouton name="JOUER" className="bigButton" />
-        <Bouton name="Contact" className="smallButton" />
+        <Link to="/Contact">
+          <Bouton name="Contact" className="smallButton" />
+        </Link>
       </div>
     </div>
   );
