@@ -14,7 +14,9 @@ export default function Home() {
         backgroundSize: "cover",
       }}
     >
-      <Bouton name="Règles" className="smallButton" />
+      <Link to="/Regles">
+        <Bouton name="Règles" className="smallButton" />
+      </Link>
       <Bouton name="JOUER" className="bigButton" />
       <Link to="/Contact">
         <Bouton name="Contact" className="smallButton" />
