@@ -2,6 +2,7 @@ import Header from "@components/Header";
 import Home from "@pages/Home";
 import Regles from "@pages/Regles";
 import Contact from "@pages/Contact";
+import NotificationMessage from "@components/NotificationMessage";
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Regles" element={<Regles />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/NotificationMessage" element={<NotificationMessage />} />
       </Routes>
     </div>
   );

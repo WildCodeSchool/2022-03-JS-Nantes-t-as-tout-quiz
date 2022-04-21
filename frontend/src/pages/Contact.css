@@ -5,9 +5,6 @@ h2 {
   background-color: var(--beige);
   font-size: 3rem;
   opacity: 0.8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: cursive;
   color: var(--brown);
 }

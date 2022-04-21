@@ -1,11 +1,10 @@
-/* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
 import Countdown from "@components/CountdownTimer";
 import "../App.css";
 import "./Home.css";
 import "../components/countdown.css";
 import prairie from "@assets/prairieChampignons.jpg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 // eslint-disable-next-line consistent-return
 function Home() {
