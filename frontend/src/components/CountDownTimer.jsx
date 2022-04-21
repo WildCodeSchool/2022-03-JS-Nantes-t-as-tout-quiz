@@ -1,24 +1,36 @@
-import React from "react";
-import useCountdown from "./useCountdown";
+import React, { useState, useEffect } from "react";
 import "./countdown.css";
+import { useNavigate } from "react-router-dom";
 
-function nextPage() {
-  console.warn(`time's up`);
-}
 // eslint-disable-next-line react/prop-types
-function CountdownTimer({ targetDate }) {
-  const seconds = useCountdown(targetDate);
-
-  // eslint-disable-next-line react/prop-types
-  if (seconds === 0) {
-    nextPage();
+function CountDown({ max = 10 }) {
+  const [count, setCount] = useState(max);
+  const navigate = useNavigate();
+  function timeUp() {
+    navigate("/Newpage");
   }
-  console.warn(targetDate);
+  if (count === 0) {
+    timeUp();
+  }
+  useEffect(() => {
+    let timer = null;
+    if (count > 0) {
+      timer = setTimeout(() => {
+        setCount(count - 1);
+      }, 1000);
+    }
+    return () => {
+      clearTimeout(timer);
+    };
+  });
+  useEffect(() => {
+    setCount(max);
+  }, [max]);
   return (
-    <div>
-      <p>{seconds}</p>
+    <div className={count <= 3 ? "timeUp" : "countdown"}>
+      <h1>{count}</h1>
     </div>
   );
 }
 
-export default CountdownTimer;
+export default CountDown;

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
-import CountdownTimer from "@components/CountdownTimer";
+import Countdown from "@components/CountdownTimer";
 import "../App.css";
 import "./Home.css";
 import "../components/countdown.css";
@@ -15,12 +15,10 @@ import prairieFleurie from "@assets/prairie_fleurie.jpg";
 import prairie2 from "@assets/prairie.jpg";
 import montagnesMaison from "@assets/montagnes_maison.jpg";
 
-let background = 0;
-const NOW_IN_MS = new Date().getTime();
-
 // function debut à refactoriser
 // eslint-disable-next-line consistent-return
 function debut() {
+  let background = 0;
   background = Math.random();
   if (background < 0.15) {
     return prairie;
@@ -65,8 +63,8 @@ function Home() {
         backgroundPosition: "center",
       }}
     >
-      <div>
-        <CountdownTimer className="countdown" targetDate={NOW_IN_MS * 60} />
+      <div className="countdown">
+        <Countdown />
       </div>
       <div
         style={{
