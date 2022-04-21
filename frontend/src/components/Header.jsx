@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from "react";
 import logoToto from "@assets/logo_toto.png";
 import "../App.css";
