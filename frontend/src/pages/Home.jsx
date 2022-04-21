@@ -1,8 +1,7 @@
-/* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
 import "../App.css";
 import prairie from "@assets/prairieChampignons.jpg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -14,13 +13,13 @@ export default function Home() {
         backgroundSize: "cover",
       }}
     >
-      <Link to="/Regles">
+      <NavLink to="/Regles">
         <Bouton name="Règles" className="smallButton" />
-      </Link>
+      </NavLink>
       <Bouton name="JOUER" className="bigButton" />
-      <Link to="/Contact">
+      <NavLink to="/Contact">
         <Bouton name="Contact" className="smallButton" />
-      </Link>
+      </NavLink>
     </div>
   );
 }
