@@ -23,4 +23,49 @@ body {
   min-height: 100%;
   min-width: 100%;
   font-size: medium;
+  opacity: 1;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: calc(var(--imagery-spacing)*2);
+}
+
+.button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: var(--imagery-spacing);
+  width: calc(var(--imagery-spacing)*15);
+  background-color: var(--beige);
+  font-size: x-large;
+  box-shadow: 0 0 calc(var(--imagery-spacing)*0.5) calc(var(--imagery-spacing)*0.1) #424242;
+  opacity: 0.8;
+  border-radius: 13.62px;
+}
+
+.button:hover {
+  width: calc(var(--imagery-spacing)*20);
+  font-size: xx-large;
+}
+
+.answ-one {
+  background-color: var(--yellow);
+}
+
+.answ-two {
+  background-color: var(--green);
+}
+
+.answ-three {
+  background-color: var(--red);
+}
+
+.answ-four {
+  background-color: var(--brown);
+  color: var(--second-font-color);
 }
