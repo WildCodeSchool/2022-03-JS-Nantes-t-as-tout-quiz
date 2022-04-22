@@ -1,7 +1,6 @@
 /* eslint-disable import/no-duplicates */
 /* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
-import Countdown from "@components/CountDownTimer";
 import "../App.css";
 import "./Home.css";
 import "./Jeux.css";
@@ -9,12 +8,10 @@ import "../components/countdown.css";
 import React from "react";
 import { useState, useEffect } from "react";
 import prairie from "@assets/prairieChampignons.jpg";
-import CountDown from "@components/CountDownTimer";
 
 // eslint-disable-next-line consistent-return
 function Jeux() {
   const [question, setQuestion] = useState({});
-  useEffect(() => getQuestion(), []);
   const getQuestion = () => {
     fetch("https://sheetdb.io/api/v1/tuyf4vlxxrniq")
       .then((response) => response.json())
@@ -23,6 +20,7 @@ function Jeux() {
         console.warn(data[0]);
       });
   };
+  useEffect(() => getQuestion(), []);
   return (
     <div
       className="App"
