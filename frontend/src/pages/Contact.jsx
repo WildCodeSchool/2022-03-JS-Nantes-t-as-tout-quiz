@@ -1,5 +1,8 @@
+/* eslint-disable import/no-unresolved */
+import React from "react";
 import "./Contact.css";
 import prairie from "@assets/prairieChampignons.jpg";
+import { NavLink } from "react-router-dom";
 
 export default function Contact() {
   return (
@@ -7,8 +10,9 @@ export default function Contact() {
       className="App"
       style={{
         backgroundImage: `url(${prairie})`,
-        height: "1200px",
         backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
       }}
     >
       <h2>Contact</h2>
@@ -49,7 +53,9 @@ export default function Contact() {
           <textarea id="message" name="message" placeholder="Votre message" />
         </div>
         <div>
-          <input className="inputSubmit" type="submit" value="Envoyer" />
+          <NavLink to="/NotificationMessage">
+            <input className="inputSubmit" type="submit" value="Envoyer" />
+          </NavLink>
         </div>
       </form>
     </div>

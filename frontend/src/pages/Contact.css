@@ -5,19 +5,20 @@ h2 {
   background-color: var(--beige);
   font-size: 3rem;
   opacity: 0.8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: cursive;
   color: var(--brown);
+  margin-top: 8rem;
 }
 
 form {
-  width: 40rem;
-  border-radius: 54.5px;
+  width: clamp(20rem, 50%, 40rem);
+  border-radius: clamp(30px, 5vw, 54.5px);
   background-color: var(--beige);
   font-size: 3rem;
   opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .inputClass,
@@ -25,7 +26,7 @@ select,
 textarea {
   border-radius: 8px;
   border: none;
-  width: 25rem;
+  width: clamp(17rem, 45vw, 25rem);
   height: 2.5rem;
   margin-bottom: 1rem;
   font-family: cursive;
@@ -55,6 +56,8 @@ input::placeholder {
 select {
   color: var(--brown);
   font-family: cursive;
+  background-color: white;
+  opacity: 0.8;
 }
 
 textarea::placeholder {

@@ -11,3 +11,9 @@
   --imagery-spacing: 1vw;
   --relative-spacing: 1%;
 }
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

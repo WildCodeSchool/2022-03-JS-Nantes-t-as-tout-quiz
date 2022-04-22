@@ -7,8 +7,9 @@ export default function Regles() {
       className="App"
       style={{
         backgroundImage: `url(${prairie})`,
-        height: "1200px",
         backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
       }}
     >
       <h2>Règles</h2>
@@ -24,12 +25,6 @@ export default function Regles() {
           sapiente pariatur voluptas a ullam nam, id nihil, necessitatibus,
           consequuntur cumque non dignissimos. Quia fugit incidunt laborum neque
           reprehenderit beatae dolorem?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-          corrupti obcaecati molestiae enim iusto ducimus necessitatibus optio
-          temporibus inventore quod sunt omnis deleniti sit, aspernatur atque
-          non maxime laudantium accusamus
         </p>
       </div>
     </div>

@@ -1,0 +1,22 @@
+.notifMsg {
+  height: clamp(10rem, 8vh, 15rem);
+  width: clamp(20rem, 30%, 40rem);
+  border-radius: 54.5px;
+  background-color: var(--beige);
+  font-size: clamp(2rem, 2.5vw, 5rem);
+  opacity: 0.8;
+  font-family: cursive;
+  color: var(--brown);
+}
+
+.logoHome {
+  height: 4rem;
+  margin: 1rem;
+}
+
+.fondIcone {
+  width: 4 rem;
+  border-radius: 15px;
+  background-color: var(--beige);
+  opacity: 0.9;
+}
