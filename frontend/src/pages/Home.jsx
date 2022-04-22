@@ -33,7 +33,9 @@ function Home() {
         <Link to="/Regles">
           <Bouton name="Règles" className="smallButton" />
         </Link>
-        <Bouton name="JOUER" className="bigButton" />
+        <Link to="/Jeux">
+          <Bouton name="JOUER" className="bigButton" />
+        </Link>
         <Link to="/Contact">
           <Bouton name="Contact" className="smallButton" />
         </Link>

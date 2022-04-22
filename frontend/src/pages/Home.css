@@ -10,11 +10,9 @@ body {
   font-size: 3rem;
   opacity: 0.8;
   font-family: cursive;
-  /* margin-top: 6rem; */
 }
 
 .smallButton {
-  /* margin-top: 8rem; */
   height: 3.5rem;
   width: 11rem;
   border-radius: 54.5px;
