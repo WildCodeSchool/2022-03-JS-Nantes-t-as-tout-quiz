@@ -11,8 +11,9 @@ function NotificationMessage() {
       className="App"
       style={{
         backgroundImage: `url(${prairie})`,
-        height: "1200px",
         backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
       }}
     >
       <h2 className="notifMsg">Message envoyé</h2>
