@@ -1,32 +1,33 @@
+/* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
-import Countdown from "@components/CountdownTimer";
+// import Countdown from "@components/CountdownTimer";
 import "../App.css";
 import "./Home.css";
 import "../components/countdown.css";
 import prairie from "@assets/prairieChampignons.jpg";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import logoToto from "@assets/logo_toto.png";
 
 // eslint-disable-next-line consistent-return
 function Home() {
   return (
     <div
+      className="App"
       style={{
         backgroundImage: `url(${prairie})`,
-        height: "50rem",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        minHeight: "100vh",
       }}
     >
-      <div className="countdown">
-        <Countdown />
-      </div>
+      <div />
       <div
         style={{
-          marginTop: "50px",
+          marginTop: "13rem",
           display: "flex",
           flexFlow: "column nowrap",
           alignItems: "center",
-          gap: "5rem",
+          gap: "4rem",
         }}
       >
         <Link to="/Regles">
@@ -36,6 +37,11 @@ function Home() {
         <Link to="/Contact">
           <Bouton name="Contact" className="smallButton" />
         </Link>
+        <img
+          className="totoHome"
+          src={logoToto}
+          alt="logo d'un tatou, mascotte de l'application"
+        />
       </div>
     </div>
   );

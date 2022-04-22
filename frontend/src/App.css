@@ -9,3 +9,9 @@ body {
   --red: #d35269;
   --beige: #ffe0b5;
 }
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

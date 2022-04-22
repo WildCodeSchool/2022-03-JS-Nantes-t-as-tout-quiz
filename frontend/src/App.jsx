@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Header from "@components/Header";
 import Home from "@pages/Home";
 import Regles from "@pages/Regles";

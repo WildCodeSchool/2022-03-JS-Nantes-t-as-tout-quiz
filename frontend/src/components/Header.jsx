@@ -7,7 +7,13 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <div>
+    <div
+      style={{
+        position: "fixed",
+        zIndex: 3,
+        width: "100%",
+      }}
+    >
       <nav>
         <NavLink to="/">
           <img
