@@ -1,6 +1,5 @@
 /* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
-// import Countdown from "@components/CountdownTimer";
 import "../App.css";
 import "./Home.css";
 import "../components/countdown.css";
