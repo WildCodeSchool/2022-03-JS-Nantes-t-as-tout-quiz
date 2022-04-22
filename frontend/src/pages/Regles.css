@@ -1,0 +1,28 @@
+h2 {
+  height: 7rem;
+  width: 21rem;
+  border-radius: 54.5px;
+  background-color: var(--beige);
+  font-size: 3rem;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  color: var(--brown);
+}
+
+.instructions {
+  width: 40rem;
+  border-radius: 54.5px;
+  background-color: var(--beige);
+  font-size: 3rem;
+  opacity: 0.9;
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: cursive;
+  padding: 1rem 3.5rem 1rem 3.5rem;
+  text-align: justify;
+}

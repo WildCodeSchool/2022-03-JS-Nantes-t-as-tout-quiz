@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+.bigButton {
+  height: 7rem;
+  width: 21rem;
+  border-radius: 54.5px;
+  background-color: var(--beige);
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.smallButton {
+  height: 3.5rem;
+  width: 11rem;
+  border-radius: 54.5px;
+  background-color: var(--beige);
+  font-size: 1.5rem;
+  opacity: 0.8;
+}

@@ -1,16 +1,21 @@
-/* eslint-disable import/no-unresolved */
 import Header from "@components/Header";
 import Home from "@pages/Home";
+import Regles from "@pages/Regles";
+import Contact from "@pages/Contact";
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
+import "./pages/Home.css";
+import "@components/Header.css";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Regles" element={<Regles />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </div>
   );
