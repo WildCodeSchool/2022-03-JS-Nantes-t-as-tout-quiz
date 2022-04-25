@@ -1,6 +1,7 @@
 /* eslint-disable import/no-duplicates */
 /* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
+// import CountDown from "@components/CountDownTimer";
 import "../App.css";
 import "./Home.css";
 import "./Jeux.css";
@@ -13,11 +14,11 @@ import prairie from "@assets/prairieChampignons.jpg";
 function Jeux() {
   const [question, setQuestion] = useState({});
   const getQuestion = () => {
-    fetch("https://sheetdb.io/api/v1/tuyf4vlxxrniq")
+    fetch("http://localhost:8000/")
       .then((response) => response.json())
       .then((data) => {
-        setQuestion(data[0]);
-        console.warn(data[0]);
+        setQuestion(data.automobile.débutant[1]);
+        // console.warn(data.héroines.débutant);
       });
   };
   useEffect(() => getQuestion(), []);
@@ -40,20 +41,26 @@ function Jeux() {
           alignItems: "center",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <div>
           {/* <CountDown /> */}
           <p className="question">{question.question}</p>
         </div>
-        <Bouton name={question.proposition1} className="buttonResponse" />
-        <Bouton name={question.proposition2} className="buttonResponse" />
-        <Bouton name={question.proposition3} className="buttonResponse" />
-        <Bouton name={question.proposition4} className="buttonResponse" />
+        <Bouton
+          name={question.propositions ? question.propositions[0] : ""}
+          className="buttonResponse"
+        />
+        <Bouton
+          name={question.propositions ? question.propositions[1] : ""}
+          className="buttonResponse"
+        />
+        <Bouton
+          name={question.propositions ? question.propositions[2] : ""}
+          className="buttonResponse"
+        />
+        <Bouton
+          name={question.propositions ? question.propositions[3] : ""}
+          className="buttonResponse"
+        />
       </div>
     </div>
   );

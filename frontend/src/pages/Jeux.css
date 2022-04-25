@@ -1,11 +1,12 @@
 .buttonResponse {
-  height: 3.5rem;
-  width: 11rem;
+  height: 5rem;
+  width: 13rem;
   border-radius: 54.5px;
   background-color: var(--beige);
   font-size: 1.5rem;
   opacity: 0.8;
   font-family: cursive;
+  gap: 1;
 }
 
 .question {
