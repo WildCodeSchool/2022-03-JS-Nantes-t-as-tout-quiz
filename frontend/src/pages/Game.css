@@ -12,8 +12,16 @@
   --relative-spacing: 1%;
 }
 
-.App {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+  font-size: medium;
 }
