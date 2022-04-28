@@ -30,7 +30,7 @@ section {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: calc(var(--imagery-spacing)*2);
+  gap: calc(var(--imagery-spacing) * 2);
 }
 
 .button {
@@ -40,16 +40,17 @@ section {
   flex-flow: row wrap;
   justify-content: center;
   padding: var(--imagery-spacing);
-  width: calc(var(--imagery-spacing)*15);
+  width: calc(var(--imagery-spacing) * 15);
   background-color: var(--beige);
   font-size: x-large;
-  box-shadow: 0 0 calc(var(--imagery-spacing)*0.5) calc(var(--imagery-spacing)*0.1) #424242;
+  box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
+    calc(var(--imagery-spacing) * 0.1) #424242;
   opacity: 0.8;
   border-radius: 13.62px;
 }
 
 .button:hover {
-  width: calc(var(--imagery-spacing)*20);
+  width: calc(var(--imagery-spacing) * 20);
   font-size: xx-large;
 }
 

@@ -1,4 +1,5 @@
-export default function Bouton({ name, className, reponse}) {
+/* eslint-disable react/prop-types */
+export default function Bouton({ name, className, reponse }) {
   return (
     <div>
       <button

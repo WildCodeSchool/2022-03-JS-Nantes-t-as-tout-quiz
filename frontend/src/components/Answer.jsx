@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Bouton from "@components/Bouton";
 import "@components/Answer.css";
 
