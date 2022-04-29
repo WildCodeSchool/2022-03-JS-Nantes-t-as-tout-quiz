@@ -1,0 +1,21 @@
+/* Header */
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: var(--brown);
+}
+
+nav img {
+  height: 4rem;
+  margin: 1rem;
+  transform: scaleX(-1);
+}
+
+nav h1 {
+  color: var(--beige);
+  text-align: center;
+  width: 100%;
+  font-family: cursive;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}

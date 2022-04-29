@@ -1,8 +1,7 @@
 .filterLvlCss {
-    display: flex;
-    justify-content: center;
-    background-color: #ffe0b5;
-    align-items: center;
-    flex-direction: column;
-  }
-  
+  display: flex;
+  justify-content: center;
+  background-color: #ffe0b5;
+  align-items: center;
+  flex-direction: column;
+}

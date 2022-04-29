@@ -1,0 +1,72 @@
+:root {
+  --brown: #4c2719;
+  --yellow: #ede580;
+  --green: #a4af69;
+  --red: #d35269;
+  --beige: #ffe0b5;
+  --font: /** Indie Flower **/ ;
+  --font-color: #000000;
+  --second-font-color: #ffffff;
+  --text-spacing: 1rem;
+  --imagery-spacing: 1vw;
+  --relative-spacing: 1%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+  font-size: medium;
+  opacity: 1;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: calc(var(--imagery-spacing) * 2);
+}
+
+.button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: var(--imagery-spacing);
+  width: calc(var(--imagery-spacing) * 15);
+  background-color: var(--beige);
+  font-size: x-large;
+  box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
+    calc(var(--imagery-spacing) * 0.1) #424242;
+  opacity: 0.8;
+  border-radius: 13.62px;
+}
+
+.button:hover {
+  width: calc(var(--imagery-spacing) * 20);
+  font-size: xx-large;
+}
+
+.answ-one {
+  background-color: var(--yellow);
+}
+
+.answ-two {
+  background-color: var(--green);
+}
+
+.answ-three {
+  background-color: var(--red);
+}
+
+.answ-four {
+  background-color: var(--brown);
+  color: var(--second-font-color);
+}

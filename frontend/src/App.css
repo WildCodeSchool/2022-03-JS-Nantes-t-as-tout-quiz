@@ -1,37 +1,19 @@
-body {
-  margin: 0;
-}
-
 :root {
   --brown: #4c2719;
   --yellow: #ede580;
   --green: #a4af69;
   --red: #d35269;
   --beige: #ffe0b5;
-}
-
-.bigButton {
-  height: 7rem;
-  width: 21rem;
-  border-radius: 54.5px;
-  background-color: var(--beige);
-  font-size: 3rem;
-  opacity: 0.8;
-}
-
-.smallButton {
-  height: 3.5rem;
-  width: 11rem;
-  border-radius: 54.5px;
-  background-color: var(--beige);
-  font-size: 1.5rem;
-  opacity: 0.8;
+  --font: /** Indie Flower **/ ;
+  --font-color: #000000;
+  --second-font-color: #ffffff;
+  --text-spacing: 1rem;
+  --imagery-spacing: 1vw;
+  --relative-spacing: 1%;
 }
 
 .App {
   display: flex;
-  flex-flow: column nowrap;
   align-items: center;
-  text-align: center;
-  gap: 5rem;
+  flex-direction: column;
 }

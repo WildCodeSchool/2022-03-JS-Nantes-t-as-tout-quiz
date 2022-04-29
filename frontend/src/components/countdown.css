@@ -1,0 +1,24 @@
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-family: cursive;
+}
+
+.timeUp {
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black 1px;
+  background-color: antiquewhite;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-weight: 700;
+}

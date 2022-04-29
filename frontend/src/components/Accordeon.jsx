@@ -16,7 +16,7 @@ function Accordeon() {
         <AccordeonDetail
           themeName="🌐 Web 🌐"
           themes={[
-            "Chats⭐⭐⭐⭐",
+            "Appli⭐⭐⭐⭐",
             "Chiens⭐⭐",
             "Canards⭐⭐⭐",
             "Concombre ⭐ ",
