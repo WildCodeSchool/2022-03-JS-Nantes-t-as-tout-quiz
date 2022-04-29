@@ -2,6 +2,7 @@
 import Header from "@components/Header";
 import Home from "@pages/Home";
 import Regles from "@pages/Regles";
+import Game from "@pages/Game";
 import Contact from "@pages/Contact";
 import NotificationMessage from "@components/NotificationMessage";
 import { Route, Routes } from "react-router-dom";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Regles" element={<Regles />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Game" element={<Game />} />
         <Route path="/NotificationMessage" element={<NotificationMessage />} />
       </Routes>
     </div>
