@@ -27,7 +27,7 @@ function CountDown({ max = 10 }) {
     setCount(max);
   }, [max]);
   return (
-    <div className={count <= 3 ? "timeUp" : "countdown"}>
+    <div className={count <= 3 ? "timeUp" && "pulse" : "countdown"}>
       <h1>{count}</h1>
     </div>
   );
