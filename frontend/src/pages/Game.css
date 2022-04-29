@@ -1,27 +1,65 @@
-:root {
-  --brown: #4c2719;
-  --yellow: #ede580;
-  --green: #a4af69;
-  --red: #d35269;
-  --beige: #ffe0b5;
-  --font: /** Indie Flower **/ ;
-  --font-color: #000000;
-  --second-font-color: #ffffff;
-  --text-spacing: 1rem;
-  --imagery-spacing: 1vw;
-  --relative-spacing: 1%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
   min-height: 100%;
   min-width: 100%;
   font-size: medium;
+  opacity: 1;
+}
+
+section:nth-of-type(1) {
+  padding: calc(var(--imagery-spacing) * 50) calc(var(--imagery-spacing) * 4)
+    calc(var(--imagery-spacing) * 4) calc(var(--imagery-spacing) * 4);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+section:nth-of-type(2) {
+  padding: 0 calc(var(--imagery-spacing) * 4) 0 calc(var(--imagery-spacing) * 4);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: calc(var(--imagery-spacing) * 8);
+}
+
+section > p {
+  background-color: var(--beige);
+  font-size: xx-large;
+  box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
+    calc(var(--imagery-spacing) * 0.1) #424242;
+  opacity: 0.8;
+  border-radius: 13.62px;
+}
+
+@media screen and (min-width: 568px) {
+  section:nth-of-type(1) {
+    padding: calc(var(--imagery-spacing) * 29) calc(var(--imagery-spacing) * 4)
+      calc(var(--imagery-spacing) * 4) calc(var(--imagery-spacing) * 4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section:nth-of-type(1) {
+    padding: calc(var(--imagery-spacing) * 24.5)
+      calc(var(--imagery-spacing) * 4) calc(var(--imagery-spacing) * 4)
+      calc(var(--imagery-spacing) * 4);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section:nth-of-type(1) {
+    padding: calc(var(--imagery-spacing) * 19) calc(var(--imagery-spacing) * 4)
+      calc(var(--imagery-spacing) * 4) calc(var(--imagery-spacing) * 4);
+  }
+
+  section:nth-of-type(2) {
+    padding: 0 calc(var(--imagery-spacing) * 4) 0
+      calc(var(--imagery-spacing) * 4);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: calc(var(--imagery-spacing) * 4);
+  }
 }
