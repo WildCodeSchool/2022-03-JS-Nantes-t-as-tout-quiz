@@ -1,3 +1,7 @@
+:root {
+  --cinabre : #d81702 ;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,20 +23,19 @@ section > .countdown {
   font-size: large;
   font-weight: bold;
   box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
-    calc(var(--imagery-spacing) * 0.1) #424242;
+              calc(var(--imagery-spacing) * 0.1) #424242;
   opacity: 0.8;
 }
 
-section > .timeUp,
-.pulse {
+section > .timeUp, .pulse {
   width: calc(var(--text-spacing) * 4);
   height: calc(var(--text-spacing) * 4);
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--beige);
-  border-radius: 50%;
   color: var(--cinabre);
+  border-radius: 50%;
   font-family: cursive;
   font-weight: 700;
   opacity: 0.8;
