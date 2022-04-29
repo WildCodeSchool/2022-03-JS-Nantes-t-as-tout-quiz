@@ -1,8 +1,5 @@
 .dropdown {
   gap: 0.5rem;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* text-align: center; */
   background-color: #ffe0b5;
   height: 500px;
   width: 800px;
@@ -20,7 +17,6 @@
 }
 
 button {
-  display: flex;
   align-items: center;
   padding: 1rem;
   border: none;

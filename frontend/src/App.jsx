@@ -9,6 +9,7 @@ import NotificationMessage from "@components/NotificationMessage";
 import "./App.css";
 import "./pages/Home.css";
 import "@components/Header.css";
+import Themes from "@pages/Themes";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Regles" element={<Regles />} />
+        <Route path="/Jouer" element={<Themes />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/NotificationMessage" element={<NotificationMessage />} />
       </Routes>
