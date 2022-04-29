@@ -2,4 +2,12 @@
   display: flex;
   justify-content: center;
   background-color: #ffe0b5;
+  align-items: center;
+  flex-direction: column;
+}
+
+.filtergene {
+  display: flex;
+  gap: 50vh;
+  margin-top: 50px;
 }

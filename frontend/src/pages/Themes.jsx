@@ -5,6 +5,8 @@ import Accordeon from "@components/Accordeon";
 import cascade from "@assets/cascade_eau.jpg";
 // eslint-disable-next-line import/no-unresolved
 import Filter from "@components/filter";
+// eslint-disable-next-line import/no-unresolved
+import Filterlvl from "@components/filterlvl";
 import "../App.css";
 
 export default function Themes() {
@@ -17,7 +19,10 @@ export default function Themes() {
         backgroundSize: "cover",
       }}
     >
-      <Filter />
+      <div className="filtergene">
+        <Filter />
+        <Filterlvl />
+      </div>
       <div>
         <Accordeon />
       </div>
