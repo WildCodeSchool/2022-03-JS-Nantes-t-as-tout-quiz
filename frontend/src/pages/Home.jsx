@@ -2,6 +2,7 @@
 import Bouton from "@components/Bouton";
 import "../App.css";
 import prairie from "@assets/prairieChampignons.jpg";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -13,9 +14,9 @@ export default function Home() {
         backgroundSize: "cover",
       }}
     >
-      <Bouton name="Règles" className="smallButton" />
-      <Bouton name="JOUER" className="bigButton" />
-      <Bouton name="Contact" className="smallButton" />
+      <Link to="/Themes">
+        <Bouton name="JOUER" className="bigButton" />
+      </Link>
     </div>
   );
 }

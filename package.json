@@ -19,6 +19,6 @@
     "husky": "^7.0.0"
   },
   "dependencies": {
-    "react-router-dom": "^6.3.0"
+    "react-multi-select-component": "^4.2.5"
   }
 }

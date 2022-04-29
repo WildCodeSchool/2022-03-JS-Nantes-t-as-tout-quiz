@@ -1,11 +1,33 @@
 import React from "react";
 import "../App.css";
+// eslint-disable-next-line import/no-unresolved
+import "@components/Accordeon.css";
+
+import AccordeonDetail from "./AccordeonDetail";
 
 function Accordeon() {
   return (
-    <div className="accordeon">
-      <i className="chevron-down" />
-      <p>theme1</p>
+    <div className="calc">
+      <div className="dropdown">
+        <AccordeonDetail
+          themeName="🐼 Animaux 🐼"
+          themes={["Chats⭐⭐⭐⭐", "Chiens⭐⭐", "Canards⭐⭐⭐"]}
+        />
+        <AccordeonDetail
+          themeName="🌐 Web 🌐"
+          themes={[
+            "Chats⭐⭐⭐⭐",
+            "Chiens⭐⭐",
+            "Canards⭐⭐⭐",
+            "Concombre ⭐ ",
+          ]}
+        />
+
+        <AccordeonDetail
+          themeName="🎮 Loisirs 🎮"
+          themes={["Nintendo⭐⭐⭐⭐", "Playstation II⭐⭐", "WoW⭐⭐⭐"]}
+        />
+      </div>
     </div>
   );
 }

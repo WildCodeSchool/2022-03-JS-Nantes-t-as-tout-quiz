@@ -1,0 +1,31 @@
+.dropdown {
+  gap: 0.5rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* text-align: center; */
+  background-color: #ffe0b5;
+  height: 500px;
+  width: 800px;
+}
+
+.calc {
+  display: flex;
+  justify-content: center;
+}
+
+.quizz {
+  background-color: grey;
+  padding: 1rem;
+  text-align: left;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+}
+.thematique {
+  background-color: #ffe0b5;
+  border: 1px solid;
+}
