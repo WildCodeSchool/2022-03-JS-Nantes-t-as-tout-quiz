@@ -22,7 +22,7 @@ export default function Regles() {
           de <b>difficulté</b>, et le <b>quiz</b> se lancera ensuite.
         </p>
         <p>
-          🔥 <b>Attention :</b> Vous n'aurez que 10 secondes par question !
+          🔥 <b>Attention :</b> Vous n&apos;aurez que 10 secondes par question !
         </p>
       </div>
     </div>
