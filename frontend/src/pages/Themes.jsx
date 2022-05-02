@@ -17,6 +17,7 @@ export default function Themes() {
         backgroundImage: `url(${cascade})`,
         height: "1200px",
         backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="filtergene">

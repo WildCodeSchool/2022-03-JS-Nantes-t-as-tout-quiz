@@ -9,7 +9,7 @@ export default function Filterlvl() {
     { label: "⭐⭐", value: "lvl 2" },
     { label: "⭐⭐⭐", value: "lvl 3" },
     { label: "⭐⭐⭐⭐", value: "lvl 4" },
-    { label: "⭐⭐⭐⭐⭐", value: "Tlvl 5", disabled: false },
+    { label: "⭐⭐⭐⭐⭐", value: "lvl 5", disabled: false },
   ];
 
   const [selected, setSelected] = useState([]);
@@ -21,7 +21,7 @@ export default function Filterlvl() {
         options={options}
         value={selected}
         onChange={setSelected}
-        labelledBy="Select"
+        labelledBy="Niveau"
       />
     </div>
   );

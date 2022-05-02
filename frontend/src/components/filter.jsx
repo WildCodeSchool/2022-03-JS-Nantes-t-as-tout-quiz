@@ -21,7 +21,7 @@ export default function Filter() {
         options={options}
         value={selected}
         onChange={setSelected}
-        labelledBy="Select"
+        labelledBy="Thèmes"
       />
     </div>
   );

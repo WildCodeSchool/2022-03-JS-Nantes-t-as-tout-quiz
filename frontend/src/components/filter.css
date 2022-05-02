@@ -8,5 +8,7 @@
 .filtergene {
   display: flex;
   gap: 50vh;
-  margin: 50px;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  padding: 0;
 }
