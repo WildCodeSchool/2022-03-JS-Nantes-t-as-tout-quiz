@@ -1,7 +1,8 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import AnswerButton from "@components/AnswerButton";
-import ReponseContext from "@components/ReponseContext";
+import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
 import "@components/Game.css";
 import React, { useState, useEffect, useContext } from "react";
@@ -10,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Game() {
   const [questionNumber, setQuestionNumber] = useState(0);
-  const { reponse, setReponse } = useContext(ReponseContext);
+  const { score, setScore } = useContext(ScoreContext);
   const { quiz, difficulte } = useContext(QuizContext);
   const [proposition, setProposition] = useState("");
   const [questions, setQuestions] = useState({});
@@ -32,7 +33,10 @@ export default function Game() {
       timeUp();
     }
     if (proposition === questions.réponse) {
-      setReponse(reponse + 1);
+      setScore(score + 1);
+      alert(`Bravo ! Le savais-tu ?
+
+${questions.anecdote}`);
     }
   }, [proposition]);
   useEffect(() => getQuestion(), [proposition]);

@@ -3,10 +3,6 @@ import React from "react";
 import Accordeon from "@components/Accordeon";
 // eslint-disable-next-line import/no-unresolved
 import cascade from "@assets/cascade_eau.jpg";
-// eslint-disable-next-line import/no-unresolved
-import Filter from "@components/filter";
-// eslint-disable-next-line import/no-unresolved
-import Filterlvl from "@components/filterlvl";
 import "../App.css";
 
 export default function Themes() {
@@ -19,11 +15,7 @@ export default function Themes() {
         backgroundSize: "cover",
       }}
     >
-      <div className="filtergene">
-        <Filter />
-        <Filterlvl />
-      </div>
-      <div>
+      <div style={{ marginTop: "150px" }}>
         <Accordeon />
       </div>
     </div>

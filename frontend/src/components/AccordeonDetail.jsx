@@ -1,10 +1,7 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable import/no-unresolved */
-// eslint-disable-next-line import/no-unresolved
 import React, { useState, useContext } from "react";
 import "@components/Accordeon.css";
-import PropTypes from "prop-types";
 import QuizContext from "@components/QuizContext";
 import { useNavigate } from "react-router-dom";
 
@@ -39,14 +36,5 @@ function AccordeonDetail({ themeName, quizTheme }) {
     </section>
   );
 }
-
-// AccordeonDetail.propTypes = {
-//   themes: PropTypes.arrayOf(PropTypes.string),
-//   themeName: PropTypes.string,
-// };
-// AccordeonDetail.defaultProps = {
-//   themes: [],
-//   themeName: "",
-// };
 
 export default AccordeonDetail;

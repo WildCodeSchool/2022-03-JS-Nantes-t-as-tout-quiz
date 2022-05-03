@@ -7,7 +7,6 @@ import prairie from "@assets/prairieChampignons.jpg";
 import { Link } from "react-router-dom";
 import logoToto from "@assets/logo_toto.png";
 
-// eslint-disable-next-line consistent-return
 function Home() {
   return (
     <div
@@ -33,9 +32,6 @@ function Home() {
           <Bouton name="Règles" className="smallButton" />
         </Link>
         <Link to="/Themes">
-          <Bouton name="Themes" className="bigButton" />
-        </Link>
-        <Link to="/Game">
           <Bouton name="JOUER" className="bigButton" />
         </Link>
         <Link to="/Contact">

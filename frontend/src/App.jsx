@@ -8,7 +8,7 @@ import Game from "@pages/Game";
 import Score from "@pages/Score";
 import Contact from "@pages/Contact";
 import NotificationMessage from "@components/NotificationMessage";
-import ReponseContext from "@components/ReponseContext";
+import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
 
 import "./App.css";
@@ -18,12 +18,12 @@ import Themes from "@pages/Themes";
 import { useState } from "react";
 
 function App() {
-  const [reponse, setReponse] = useState(0);
+  const [score, setScore] = useState(0);
   const [quiz, setQuiz] = useState("");
   const [difficulte, setDifficulte] = useState("");
   return (
     <div>
-      <ReponseContext.Provider value={{ reponse, setReponse }}>
+      <ScoreContext.Provider value={{ score, setScore }}>
         <QuizContext.Provider
           value={{ quiz, setQuiz, difficulte, setDifficulte }}
         >
@@ -41,7 +41,7 @@ function App() {
             />
           </Routes>
         </QuizContext.Provider>
-      </ReponseContext.Provider>
+      </ScoreContext.Provider>
     </div>
   );
 }

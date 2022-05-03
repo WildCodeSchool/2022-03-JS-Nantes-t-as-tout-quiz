@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable no-undef */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import React, { useContext } from "react";
@@ -5,10 +8,10 @@ import logoHome from "@assets/logo_home.png";
 import prairie from "@assets/prairieChampignons.jpg";
 import "@components/NotificationMessage.css";
 import { NavLink } from "react-router-dom";
-import ReponseContext from "@components/ReponseContext";
+import ScoreContext from "@components/ScoreContext";
 
 function Score() {
-  const { reponse } = useContext(ReponseContext);
+  const { score, setScore } = useContext(ScoreContext);
   return (
     <div
       className="App"
@@ -21,7 +24,7 @@ function Score() {
     >
       <h2 className="notifMsg">
         {" "}
-        Score <br /> {reponse} / 10{" "}
+        Score <br /> {score} / 10{" "}
       </h2>
       <div className="fondIcone">
         <NavLink to="/">
@@ -29,6 +32,7 @@ function Score() {
             className="logoHome"
             src={logoHome}
             alt="logo d'une maison: permet le retour à la page d'accueil"
+            onClick={() => setScore(0)}
           />
         </NavLink>
       </div>
