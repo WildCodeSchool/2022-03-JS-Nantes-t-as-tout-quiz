@@ -1,22 +1,40 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import AnswerButton from "@components/AnswerButton";
-import "@components/Answer.css";
-import { useState, useEffect } from "react";
+import ReponseContext from "@components/ReponseContext";
+import QuizContext from "@components/QuizContext";
+import "@components/Game.css";
+import React, { useState, useEffect, useContext } from "react";
 import prairie from "@assets/prairieChampignons.jpg";
+import { useNavigate } from "react-router-dom";
 
-export default function Answer() {
+export default function Game() {
   const [questionNumber, setQuestionNumber] = useState(0);
+  const { reponse, setReponse } = useContext(ReponseContext);
+  const { quiz, difficulte } = useContext(QuizContext);
   const [proposition, setProposition] = useState("");
   const [questions, setQuestions] = useState({});
+  const navigate = useNavigate();
+  function timeUp() {
+    navigate("/Score");
+  }
   const getQuestion = () => {
     fetch("http://localhost:8000/")
       .then((response) => response.json())
       .then((data) => {
-        console.warn(data.animaux.débutant[questionNumber].question);
-        setQuestions(data.animaux.débutant[questionNumber]);
+        setQuestions(data[quiz][difficulte][questionNumber]);
       });
   };
-  useEffect(() => setQuestionNumber(questionNumber + 1), [proposition]);
+  useEffect(() => {
+    if (questionNumber < 10) {
+      setQuestionNumber(questionNumber + 1);
+    } else {
+      timeUp();
+    }
+    if (proposition === questions.réponse) {
+      setReponse(reponse + 1);
+    }
+  }, [proposition]);
   useEffect(() => getQuestion(), [proposition]);
   return (
     <div
@@ -34,6 +52,7 @@ export default function Answer() {
         </p>
       </section>
       <section>
+        <h1>{questionNumber} / 10</h1>
         <AnswerButton
           className="button answ-one"
           proposition={questions.question ? questions.propositions[0] : ""}

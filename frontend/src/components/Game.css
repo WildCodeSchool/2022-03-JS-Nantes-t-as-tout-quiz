@@ -24,11 +24,6 @@ body {
   border-radius: 13.62px;
 }
 
-.button:hover {
-  width: calc(var(--text-spacing) * 15);
-  font-size: xx-large;
-}
-
 .answ-one {
   background-color: var(--yellow);
 }
@@ -47,14 +42,13 @@ body {
 }
 
 section > p {
-  margin: calc(var(--text-spacing)*18)
-          calc(var(--text-spacing)*13)
-          calc(var(--text-spacing)*9)
-          calc(var(--text-spacing)*13);
+  margin: calc(var(--text-spacing) * 18) calc(var(--text-spacing) * 13)
+    calc(var(--text-spacing) * 9) calc(var(--text-spacing) * 13);
   padding: var(--text-spacing);
   background-color: var(--beige);
   font-size: x-large;
-  box-shadow: 0 0 calc(var(--imagery-spacing)*0.5) calc(var(--imagery-spacing)*0.1) #424242;
+  box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
+    calc(var(--imagery-spacing) * 0.1) #424242;
   opacity: 0.8;
   border-radius: 13.62px;
 }

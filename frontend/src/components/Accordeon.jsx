@@ -11,21 +11,19 @@ function Accordeon() {
       <div className="dropdown">
         <AccordeonDetail
           themeName="🐼 Animaux 🐼"
-          themes={["Chats⭐⭐⭐⭐", "Chiens⭐⭐", "Canards⭐⭐⭐"]}
+          quizTheme="animaux"
+          themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
         />
         <AccordeonDetail
-          themeName="🌐 Web 🌐"
-          themes={[
-            "Appli⭐⭐⭐⭐",
-            "Chiens⭐⭐",
-            "Canards⭐⭐⭐",
-            "Concombre ⭐ ",
-          ]}
+          themeName="🌐 Automobile 🌐"
+          quizTheme="automobile"
+          themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
         />
 
         <AccordeonDetail
-          themeName="🎮 Loisirs 🎮"
-          themes={["Nintendo⭐⭐⭐⭐", "Playstation II⭐⭐", "WoW⭐⭐⭐"]}
+          themeName="🎮 héroines 🎮"
+          quizTheme="héroines"
+          themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
         />
       </div>
     </div>
