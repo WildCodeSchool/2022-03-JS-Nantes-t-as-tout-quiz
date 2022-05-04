@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from "react";
 import logoHome from "@assets/logo_home.png";
 import prairie from "@assets/prairieChampignons.jpg";
