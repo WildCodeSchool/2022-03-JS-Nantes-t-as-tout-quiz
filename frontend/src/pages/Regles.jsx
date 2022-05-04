@@ -14,17 +14,15 @@ export default function Regles() {
     >
       <h2>Règles</h2>
       <div className="instructions">
+        <h3>🎯 Principe</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quam
-          voluptate alias porro repellendus commodi temporibus, quis,
-          repudiandae perspiciatis aut soluta magnam nesciunt, aspernatur
-          eveniet quisquam. Dolore nemo atque harum.
+          L&apos;ensemble des questions du <b>T&apos;As Tout Quiz</b> sont
+          disponibles en appuyant sur le bouton <b>« JOUER »</b>. Choisissez
+          parmi une des <b>thématiques</b> proposées, en fonction de son niveau
+          de <b>difficulté</b>, et le <b>quiz</b> se lancera ensuite.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-          sapiente pariatur voluptas a ullam nam, id nihil, necessitatibus,
-          consequuntur cumque non dignissimos. Quia fugit incidunt laborum neque
-          reprehenderit beatae dolorem?
+          🔥 <b>Attention :</b> Vous n&apos;aurez que 10 secondes par question !
         </p>
       </div>
     </div>
