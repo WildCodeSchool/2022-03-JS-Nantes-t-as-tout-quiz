@@ -49,7 +49,13 @@ export default function Contact() {
             </select>
           </div>
           <div>
-            <textarea id="message" name="message" placeholder="Votre message" rows="12" cols="24" />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Votre message"
+              rows="12"
+              cols="24"
+            />
           </div>
           <div>
             <NavLink className="navLink" to="/NotificationMessage">

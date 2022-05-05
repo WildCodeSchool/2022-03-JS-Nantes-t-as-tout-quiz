@@ -1,5 +1,9 @@
 main.App > section:nth-of-type(1) > h2.notifMsg {
-  width: clamp(calc(var(--text-spacing)*20), 100%, calc(var(--text-spacing)*40));
+  width: clamp(
+    calc(var(--text-spacing) * 20),
+    100%,
+    calc(var(--text-spacing) * 40)
+  );
   border-radius: 54.5px;
   background-color: var(--beige);
   color: var(--brown);
@@ -12,10 +16,18 @@ main.App > section:nth-of-type(1) > div.fondIcone {
 }
 
 main.App > section:nth-of-type(1) > div.fondIcone > .navLink > img.logoHome {
-  width: clamp(calc(var(--text-spacing)*3), 100%, calc(var(--text-spacing)*6));
-  height: clamp(calc(var(--text-spacing)*3), 100%, calc(var(--text-spacing)*6));
+  width: clamp(
+    calc(var(--text-spacing) * 3),
+    100%,
+    calc(var(--text-spacing) * 6)
+  );
+  height: clamp(
+    calc(var(--text-spacing) * 3),
+    100%,
+    calc(var(--text-spacing) * 6)
+  );
 }
-  
+
 .logoHome {
   height: 4rem;
 }
@@ -41,6 +53,4 @@ main.App > section:nth-of-type(1) > div.fondIcone > .navLink > img.logoHome {
   width: 20rem;
   justify-content: space-between;
   align-items: center;
-
 }
-
