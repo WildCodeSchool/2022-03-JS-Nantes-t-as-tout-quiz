@@ -1,67 +1,73 @@
-h2 {
-  height: 7rem;
-  width: 21rem;
-  border-radius: 54.5px;
-  background-color: var(--beige);
-  font-size: 3rem;
-  opacity: 0.8;
-  font-family: cursive;
-  color: var(--brown);
-  margin-top: 8rem;
-}
-
-form {
-  width: clamp(20rem, 50%, 40rem);
-  border-radius: clamp(30px, 5vw, 54.5px);
-  background-color: var(--beige);
-  font-size: 3rem;
-  opacity: 0.9;
+main.App > section:nth-of-type(1) {
+  padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   align-items: center;
 }
 
-.inputClass,
-select,
-textarea {
-  border-radius: 8px;
-  border: none;
-  width: clamp(17rem, 45vw, 25rem);
-  height: 2.5rem;
-  margin-bottom: 1rem;
-  font-family: cursive;
+main.App > section:nth-of-type(1) > h2 {
+  border-radius: 54.5px;
+  background-color: var(--beige);
+  color: var(--brown);
+  font-size: calc(var(--text-spacing)*3);
+  opacity: 1;
 }
 
-textarea {
-  margin-top: 1rem;
-  height: 8rem;
-  font-family: cursive;
+main.App > section:nth-of-type(1) > form {
+  padding: calc(var(--text-spacing)*1.8);
+  width: clamp(calc(var(--text-spacing)*20), calc(var(--imagery-spacing)*100), (var(--text-spacing)*40));
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border-radius: 54.5px;
+  background-color: var(--beige);
+  gap: calc(var(--text-spacing)*1.8);
 }
 
-.inputSubmit {
-  border-radius: 8px;
+main.App > section:nth-of-type(1) > form > div > input,
+main.App > section:nth-of-type(1) > form > div > select,
+main.App > section:nth-of-type(1) > form > div > textarea {
+  padding: calc(var(--text-spacing)*1.25);
+  width: clamp(calc(var(--text-spacing)*16), calc(var(--imagery-spacing)*100), (var(--text-spacing)*32));
+  border-radius: 13.62px;
+  background-color: var(--white);
+  color: var(--brown);
+  font-size: medium;
+  outline: none;
   border: none;
-  width: 15rem;
-  height: 3.5rem;
-  margin-bottom: 1rem;
-  font-family: cursive;
+}
+
+main.App > section:nth-of-type(1) > form > div > textarea {
+  font-size: large;
+}
+
+main.App > section:nth-of-type(1) > form > div > input:hover,
+main.App > section:nth-of-type(1) > form > div > select:hover,
+main.App > section:nth-of-type(1) > form > div > textarea:hover {
+  border: calc(var(text-spacing)*0.15) var(--brown) solid;
+}
+
+main.App > section:nth-of-type(1) > form > div > input::placeholder {
+  color: var(--brown);
+}
+
+main.App > section:nth-of-type(1) > form > div > select {
+  color: var(--brown);
+}
+
+main.App > section:nth-of-type(1) > form > div > textarea::placeholder {
+  color: var(--brown);
+}
+
+main.App > section > form > div > .navLink > input.inputSubmit {
+  padding: var(--text-spacing)
+           calc(var(--text-spacing)*4)
+           var(--text-spacing)
+           calc(var(--text-spacing)*4);
+  width: clamp(calc(var(--imagery-spacing)*4), calc(var(--relative-spacing)*100), (var(--imagery-spacing)*24));
+  border: none;
+  border-radius: 13.62px;
   background-color: var(--brown);
   color: var(--beige);
-}
-
-input::placeholder {
-  color: var(--brown);
-}
-
-select {
-  color: var(--brown);
-  font-family: cursive;
-  background-color: white;
-  opacity: 0.8;
-}
-
-textarea::placeholder {
-  color: var(--brown);
-  vertical-align: middle;
-  font-family: cursive;
+  font-size: large;
 }
