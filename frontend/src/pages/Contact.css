@@ -9,26 +9,35 @@ main.App > section:nth-of-type(1) > h2 {
   border-radius: 54.5px;
   background-color: var(--beige);
   color: var(--brown);
-  font-size: calc(var(--text-spacing)*3);
+  font-size: calc(var(--text-spacing) * 3);
   opacity: 1;
+  padding: 1rem 2rem;
 }
 
 main.App > section:nth-of-type(1) > form {
-  padding: calc(var(--text-spacing)*1.8);
-  width: clamp(calc(var(--text-spacing)*20), calc(var(--imagery-spacing)*100), (var(--text-spacing)*40));
+  padding: calc(var(--text-spacing) * 1.8);
+  width: clamp(
+    calc(var(--text-spacing) * 20),
+    calc(var(--imagery-spacing) * 100),
+    (var(--text-spacing) * 40)
+  );
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   border-radius: 54.5px;
   background-color: var(--beige);
-  gap: calc(var(--text-spacing)*1.8);
+  gap: calc(var(--text-spacing) * 1.8);
 }
 
 main.App > section:nth-of-type(1) > form > div > input,
 main.App > section:nth-of-type(1) > form > div > select,
 main.App > section:nth-of-type(1) > form > div > textarea {
-  padding: calc(var(--text-spacing)*1.25);
-  width: clamp(calc(var(--text-spacing)*16), calc(var(--imagery-spacing)*100), (var(--text-spacing)*32));
+  padding: calc(var(--text-spacing) * 1.25);
+  width: clamp(
+    calc(var(--text-spacing) * 16),
+    calc(var(--imagery-spacing) * 100),
+    (var(--text-spacing) * 32)
+  );
   border-radius: 13.62px;
   background-color: var(--white);
   color: var(--brown);
@@ -44,7 +53,7 @@ main.App > section:nth-of-type(1) > form > div > textarea {
 main.App > section:nth-of-type(1) > form > div > input:hover,
 main.App > section:nth-of-type(1) > form > div > select:hover,
 main.App > section:nth-of-type(1) > form > div > textarea:hover {
-  border: calc(var(text-spacing)*0.15) var(--brown) solid;
+  border: calc(var(text-spacing) * 0.15) var(--brown) solid;
 }
 
 main.App > section:nth-of-type(1) > form > div > input::placeholder {
@@ -60,11 +69,9 @@ main.App > section:nth-of-type(1) > form > div > textarea::placeholder {
 }
 
 main.App > section > form > div > .navLink > input.inputSubmit {
-  padding: var(--text-spacing)
-           calc(var(--text-spacing)*4)
-           var(--text-spacing)
-           calc(var(--text-spacing)*4);
-  width: clamp(calc(var(--imagery-spacing)*4), calc(var(--relative-spacing)*100), (var(--imagery-spacing)*24));
+  padding: var(--text-spacing) calc(var(--text-spacing) * 4) var(--text-spacing)
+    calc(var(--text-spacing) * 4);
+  //width: clamp(calc(var(--imagery-spacing)*4), calc(var(--relative-spacing)*100), (var(--imagery-spacing)*24));
   border: none;
   border-radius: 13.62px;
   background-color: var(--brown);

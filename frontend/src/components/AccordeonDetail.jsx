@@ -19,7 +19,7 @@ function AccordeonDetail({ themeName, quizTheme }) {
     timeUp();
   };
   return (
-    <section id="drop">
+    <section className="drop">
       <button
         className="thematique"
         type="button"
