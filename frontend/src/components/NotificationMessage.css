@@ -1,14 +1,21 @@
-.notifMsg {
-  height: clamp(10rem, 8vh, 15rem);
-  width: clamp(20rem, 30%, 40rem);
+main.App > section:nth-of-type(1) > h2.notifMsg {
+  width: clamp(calc(var(--text-spacing)*20), 100%, calc(var(--text-spacing)*40));
   border-radius: 54.5px;
   background-color: var(--beige);
-  font-size: clamp(2rem, 2.5vw, 5rem);
-  opacity: 0.8;
-  font-family: cursive;
   color: var(--brown);
+  font-size: xx-large;
+}
+main.App > section:nth-of-type(1) > div.fondIcone {
+  padding: var(--text-spacing);
+  border-radius: 13.62px;
+  background-color: var(--beige);
 }
 
+main.App > section:nth-of-type(1) > div.fondIcone > .navLink > img.logoHome {
+  width: clamp(calc(var(--text-spacing)*3), 100%, calc(var(--text-spacing)*6));
+  height: clamp(calc(var(--text-spacing)*3), 100%, calc(var(--text-spacing)*6));
+}
+  
 .logoHome {
   height: 4rem;
 }
@@ -34,4 +41,6 @@
   width: 20rem;
   justify-content: space-between;
   align-items: center;
+
 }
+
