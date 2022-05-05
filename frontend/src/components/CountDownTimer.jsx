@@ -3,7 +3,7 @@ import "./countdown.css";
 // import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
-function CountDown({ max = 10, nbQuestion, setNbQuestion }) {
+function CountDown({ max = 10 }) {
   const [count, setCount] = useState(max);
   // const navigate = useNavigate();
   // function timeUp() {

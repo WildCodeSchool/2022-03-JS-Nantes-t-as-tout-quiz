@@ -3,7 +3,7 @@
   --yellow: #ede580;
   --green: #a4af69;
   --red: #d35269;
-  --beige: rgba(255,224,181,0.8);
+  --beige: rgba(255, 224, 181, 0.8);
   --font-color: #000000;
   --second-font-color: #ffffff;
   --text-spacing: 1rem;
@@ -11,7 +11,9 @@
   --relative-spacing: 1%;
 }
 
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
