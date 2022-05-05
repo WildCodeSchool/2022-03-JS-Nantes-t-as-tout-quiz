@@ -4,6 +4,7 @@
   --cinabre : #d81702;
   --red: #d35269;
   --beige: rgba(255,224,181,0.8);
+  --white: #ffffff;
   --font-color: #000000;
   --second-font-color: #ffffff;
   --text-spacing: 1rem;
@@ -27,5 +28,6 @@ body {
 .App {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 }

@@ -1,5 +1,0 @@
-section > p.questnum {
-  font-size: large;
-  padding: var(--text-spacing) calc(var(--text-spacing) * 2) var(--text-spacing)
-    calc(var(--text-spacing) * 2);
-}
