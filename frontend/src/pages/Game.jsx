@@ -1,13 +1,14 @@
 /* eslint-disable no-alert */
-/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import AnswerButton from "@components/AnswerButton";
+import CountDownTimer from "@components/CountDownTimer";
 import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
 import "@components/Game.css";
 import React, { useState, useEffect, useContext } from "react";
 import prairie from "@assets/prairieChampignons.jpg";
 import { useNavigate } from "react-router-dom";
+import { stockData } from "@pages/data";
 
 export default function Game() {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -16,21 +17,17 @@ export default function Game() {
   const [proposition, setProposition] = useState("");
   const [questions, setQuestions] = useState({});
   const navigate = useNavigate();
-  function timeUp() {
+  function lastQuestion() {
     navigate("/Score");
   }
   const getQuestion = () => {
-    fetch("http://localhost:8000/")
-      .then((response) => response.json())
-      .then((data) => {
-        setQuestions(data[quiz][difficulte][questionNumber]);
-      });
+    setQuestions(stockData[quiz][difficulte][questionNumber]);
   };
   useEffect(() => {
     if (questionNumber < 10) {
       setQuestionNumber(questionNumber + 1);
     } else {
-      timeUp();
+      lastQuestion();
     }
     if (proposition === questions.réponse) {
       setScore(score + 1);
@@ -54,6 +51,7 @@ ${questions.anecdote}`);
         <p className="question">
           {questions.question ? questions.question : ""}{" "}
         </p>
+        <CountDownTimer nbQuestion={questionNumber} />
       </section>
       <section>
         <h1>{questionNumber} / 10</h1>

@@ -1,7 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import React from "react";
-// eslint-disable-next-line import/no-unresolved
 import Accordeon from "@components/Accordeon";
-// eslint-disable-next-line import/no-unresolved
 import cascade from "@assets/cascade_eau.jpg";
 import "../App.css";
 

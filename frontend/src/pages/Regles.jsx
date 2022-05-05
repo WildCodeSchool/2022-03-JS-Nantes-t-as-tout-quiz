@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import "./Regles.css";
 import prairie from "@assets/prairieChampignons.jpg";
 

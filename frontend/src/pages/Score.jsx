@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import React, { useContext } from "react";
 import logoHome from "@assets/logo_home.png";
@@ -12,6 +10,7 @@ import ScoreContext from "@components/ScoreContext";
 
 function Score() {
   const { score, setScore } = useContext(ScoreContext);
+
   return (
     <div
       className="App"
