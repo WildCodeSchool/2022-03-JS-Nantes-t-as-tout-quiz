@@ -11,12 +11,27 @@
 
 .logoHome {
   height: 4rem;
-  margin: 1rem;
+}
+
+.logoTheme {
+  width: 4rem;
 }
 
 .fondIcone {
-  width: 4 rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 6rem;
   border-radius: 15px;
   background-color: var(--beige);
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+.boutonsScore {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import "./Regles.css";
 import prairie from "@assets/prairieChampignons.jpg";
 
@@ -20,9 +21,6 @@ export default function Regles() {
           disponibles en appuyant sur le bouton <b>« JOUER »</b>. Choisissez
           parmi une des <b>thématiques</b> proposées, en fonction de son niveau
           de <b>difficulté</b>, et le <b>quiz</b> se lancera ensuite.
-        </p>
-        <p>
-          🔥 <b>Attention :</b> Vous n&apos;aurez que 10 secondes par question !
         </p>
       </div>
     </div>
