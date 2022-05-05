@@ -13,15 +13,17 @@ body {
   padding: var(--text-spacing);
   margin: 0 0 var(--imagery-spacing) 0;
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
-  width: calc(var(--text-spacing) * 10);
+  align-items: center;
+  width: calc(var(--text-spacing) * 20);
   background-color: var(--beige);
   font-size: x-large;
   box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
     calc(var(--imagery-spacing) * 0.1) #424242;
   opacity: 0.8;
   border-radius: 13.62px;
+  font-size: clamp(0.8rem, 5vw, 1.3rem);
+  font-family: cursive;
 }
 
 .answ-one {
@@ -39,11 +41,12 @@ body {
 .answ-four {
   background-color: var(--brown);
   color: var(--second-font-color);
+  margin-bottom: 50px;
 }
 
-section > p {
-  margin: calc(var(--text-spacing) * 18) calc(var(--text-spacing) * 13)
-    calc(var(--text-spacing) * 9) calc(var(--text-spacing) * 13);
+.question {
+  margin: calc(var(--text-spacing) * 12) calc(var(--text-spacing) * 1)
+    calc(var(--text-spacing) * 2) calc(var(--text-spacing) * 1);
   padding: var(--text-spacing);
   background-color: var(--beige);
   font-size: x-large;
@@ -51,4 +54,9 @@ section > p {
     calc(var(--imagery-spacing) * 0.1) #424242;
   opacity: 0.8;
   border-radius: 13.62px;
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
+}
+
+.scoring {
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
 }

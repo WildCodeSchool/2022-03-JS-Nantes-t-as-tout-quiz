@@ -12,7 +12,9 @@
   --relative-spacing: 1%;
 }
 
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

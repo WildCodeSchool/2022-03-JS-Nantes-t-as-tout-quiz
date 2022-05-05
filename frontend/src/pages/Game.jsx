@@ -6,8 +6,9 @@ import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
 import "@components/Game.css";
 import React, { useState, useEffect, useContext } from "react";
-import prairie from "@assets/prairieChampignons.jpg";
+import cascade from "@assets/cascade_eau.jpg";
 import { useNavigate } from "react-router-dom";
+import { stockData } from "@pages/data";
 
 export default function Game() {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -16,24 +17,21 @@ export default function Game() {
   const [proposition, setProposition] = useState("");
   const [questions, setQuestions] = useState({});
   const navigate = useNavigate();
-  function timeUp() {
+  function lastQuestion() {
     navigate("/Score");
   }
   const getQuestion = () => {
-    fetch("http://localhost:8000/")
-      .then((response) => response.json())
-      .then((data) => {
-        setQuestions(data[quiz][difficulte][questionNumber]);
-      });
+    setQuestions(stockData[quiz][difficulte][questionNumber]);
   };
   useEffect(() => {
     if (questionNumber < 10) {
       setQuestionNumber(questionNumber + 1);
     } else {
-      timeUp();
+      lastQuestion();
     }
     if (proposition === questions.réponse) {
       setScore(score + 1);
+
       alert(`Bravo ! Le savais-tu ?
 
 ${questions.anecdote}`);
@@ -44,40 +42,37 @@ ${questions.anecdote}`);
     <div
       className="App"
       style={{
-        backgroundImage: `url(${prairie})`,
+        backgroundImage: `url(${cascade})`,
+        backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
       }}
     >
-      <section>
-        <p className="question">
-          {questions.question ? questions.question : ""}{" "}
-        </p>
-      </section>
-      <section>
-        <h1>{questionNumber} / 10</h1>
-        <AnswerButton
-          className="button answ-one"
-          proposition={questions.question ? questions.propositions[0] : ""}
-          setProposition={setProposition}
-        />
-        <AnswerButton
-          className="button answ-two"
-          proposition={questions.question ? questions.propositions[1] : ""}
-          setProposition={setProposition}
-        />
-        <AnswerButton
-          className="button answ-three"
-          proposition={questions.question ? questions.propositions[2] : ""}
-          setProposition={setProposition}
-        />
-        <AnswerButton
-          className="button answ-four"
-          proposition={questions.question ? questions.propositions[3] : ""}
-          setProposition={setProposition}
-        />
-      </section>
+      <p className="question">
+        {questions.question ? questions.question : ""}{" "}
+      </p>
+      <h1 className="scoring">{questionNumber} / 10</h1>
+      <AnswerButton
+        className="button answ-one"
+        proposition={questions.question ? questions.propositions[0] : ""}
+        setProposition={setProposition}
+      />
+      <AnswerButton
+        className="button answ-two"
+        proposition={questions.question ? questions.propositions[1] : ""}
+        setProposition={setProposition}
+      />
+      <AnswerButton
+        className="button answ-three"
+        proposition={questions.question ? questions.propositions[2] : ""}
+        setProposition={setProposition}
+      />
+      <AnswerButton
+        className="button answ-four"
+        proposition={questions.question ? questions.propositions[3] : ""}
+        setProposition={setProposition}
+      />
     </div>
   );
 }
