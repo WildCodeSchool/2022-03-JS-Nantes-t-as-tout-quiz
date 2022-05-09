@@ -7,15 +7,14 @@ body {
   opacity: 1;
 }
 
-section > .countdown {
-  width: calc(var(--text-spacing) * 4);
-  height: calc(var(--text-spacing) * 4);
+.countdown {
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--beige);
   border-radius: 50%;
-  font-family: cursive;
   font-size: large;
   font-weight: bold;
   box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
@@ -23,22 +22,21 @@ section > .countdown {
   opacity: 0.8;
 }
 
-section > .timeUp,
+.timeUp,
 .pulse {
-  width: calc(var(--text-spacing) * 4);
-  height: calc(var(--text-spacing) * 4);
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--beige);
   border-radius: 50%;
   color: var(--cinabre);
-  font-family: cursive;
   font-weight: 700;
   opacity: 0.8;
 }
 
-section > .pulse {
+.pulse {
   animation: pulse-animation 1s infinite;
 }
 

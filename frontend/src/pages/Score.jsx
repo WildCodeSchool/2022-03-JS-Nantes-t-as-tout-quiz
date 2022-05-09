@@ -34,6 +34,7 @@ function Score() {
               className="logoTheme"
               src={logoTheme}
               alt="logo qui permet le retour à la page thématique"
+              title="Retour à la page thématique"
               onClick={() => setScore(0)}
             />
           </NavLink>
@@ -44,6 +45,7 @@ function Score() {
               className="logoHome"
               src={logoHome}
               alt="logo d'une maison: permet le retour à la page d'accueil"
+              title="Retour à la page d'accueil"
               onClick={() => setScore(0)}
             />
           </NavLink>

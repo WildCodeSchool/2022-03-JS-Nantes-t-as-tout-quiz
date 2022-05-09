@@ -6,11 +6,25 @@ div > h2 {
   align-items: center;
   background-color: var(--beige);
   border-radius: 54.5px;
-  font-family: cursive;
   font-size: calc(var(--text-spacing) * 2.5);
   color: var(--brown);
   opacity: 1;
   padding: 1rem 2rem;
+}
+.jouer {
+  margin: calc(var(--text-spacing));
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: var(--beige);
+  border-radius: 54.5px;
+  font-size: calc(var(--text-spacing) * 1.5);
+  color: var(--brown);
+  opacity: 1;
+  text-decoration: none;
+  width: 150px;
+  height: 80px;
 }
 
 div:nth-child(2) {
@@ -24,7 +38,6 @@ div > div > h3 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  font-family: cursive;
   font-size: calc(var(--text-spacing) * 2.2);
   color: var(--brown);
 }
@@ -41,7 +54,6 @@ div > div > h3 {
 
 div > div > p {
   font-size: calc(var(--text-spacing) * 1.1);
-  font-family: cursive;
   padding: 0 calc(var(--text-spacing) * 3.5) 0 calc(var(--text-spacing) * 3.5);
   text-align: center;
 }

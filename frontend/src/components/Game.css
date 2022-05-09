@@ -20,14 +20,17 @@ body {
   font-size: x-large;
   box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
     calc(var(--imagery-spacing) * 0.1) #424242;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 13.62px;
   font-size: clamp(0.8rem, 5vw, 1.3rem);
-  font-family: cursive;
 }
 
 .answ-one {
   background-color: var(--yellow);
+}
+
+.isGood {
+  transform: rotate(360dg);
 }
 
 .answ-two {
@@ -52,11 +55,56 @@ body {
   font-size: x-large;
   box-shadow: 0 0 calc(var(--imagery-spacing) * 0.5)
     calc(var(--imagery-spacing) * 0.1) #424242;
-  opacity: 0.8;
+  opacity: 1;
   border-radius: 13.62px;
   font-size: clamp(0.8rem, 5vw, 1.5rem);
 }
 
 .scoring {
   font-size: clamp(0.8rem, 5vw, 1.5rem);
+  background-color: var(--beige);
+  width: 120px;
+  height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.popup {
+  width: 800px;
+  height: 500px;
+  border-radius: 54.5px;
+  background-color: #ffe0b5;
+}
+
+.swal-text {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: var(--brown);
+}
+
+.swal-button {
+  background-color: var(--brown);
+  padding: 20px 50px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+}
+
+.swal-footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .popup {
+    width: 300px;
+    height: 350px;
+    padding: 0px;
+  }
+  .swal-text {
+    font-size: 1rem;
+  }
 }

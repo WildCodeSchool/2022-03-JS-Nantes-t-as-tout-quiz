@@ -20,7 +20,7 @@ function Accordeon() {
       />
 
       <AccordeonDetail
-        themeName="héroines"
+        themeName="Héroines"
         quizTheme="héroines"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
@@ -50,52 +50,52 @@ function Accordeon() {
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" chimie "
+        themeName=" Chimie "
         quizTheme="chimie"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" parlons sexe "
+        themeName=" Parlons sexe "
         quizTheme="parlons sexe"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" star trek "
+        themeName=" Star Trek "
         quizTheme="star trek"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" nombre "
+        themeName=" Nombre "
         quizTheme="nombre"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" playstation 2 "
+        themeName=" Playstation 2 "
         quizTheme="playstation 2"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" nintendo "
+        themeName=" Nintendo "
         quizTheme="nintendo"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" faune et flore marine "
+        themeName=" Faune et flore marine "
         quizTheme="faune et flore marine"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" culture generale "
+        themeName=" Culture generale "
         quizTheme="culture generale"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" culture generale 2 "
+        themeName=" Culture generale 2 "
         quizTheme="culture generale 2"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />
       <AccordeonDetail
-        themeName=" jurassic park "
+        themeName=" Jurassic Park "
         quizTheme="jurassic park"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
       />

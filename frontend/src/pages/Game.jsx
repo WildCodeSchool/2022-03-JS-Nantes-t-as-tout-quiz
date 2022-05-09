@@ -5,10 +5,13 @@ import AnswerButton from "@components/AnswerButton";
 import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
 import "@components/Game.css";
+import "@components/countdown.css";
 import React, { useState, useEffect, useContext } from "react";
 import cascade from "@assets/cascade_eau.jpg";
 import { useNavigate } from "react-router-dom";
 import { stockData } from "@pages/data";
+import swal from "sweetalert";
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
 
 export default function Game() {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -19,6 +22,7 @@ export default function Game() {
   const navigate = useNavigate();
   function lastQuestion() {
     navigate("/Score");
+    confetti();
   }
   const getQuestion = () => {
     setQuestions(stockData[quiz][difficulte][questionNumber]);
@@ -32,12 +36,25 @@ export default function Game() {
     if (proposition === questions.réponse) {
       setScore(score + 1);
 
-      alert(`Bravo ! Le savais-tu ?
+      swal(
+        `Bravo ! 
+        
+        Le savais-tu ?
 
-${questions.anecdote}`);
+${questions.anecdote}`,
+        {
+          button: {
+            className: "swal-button",
+            closeModal: true,
+          },
+          className: "popup",
+        }
+      );
     }
   }, [proposition]);
+
   useEffect(() => getQuestion(), [proposition]);
+
   return (
     <div
       className="App"
@@ -52,6 +69,7 @@ ${questions.anecdote}`);
       <p className="question">
         {questions.question ? questions.question : ""}{" "}
       </p>
+
       <h1 className="scoring">{questionNumber} / 10</h1>
       <AnswerButton
         className="button answ-one"
