@@ -2,7 +2,7 @@ import React from "react";
 // eslint-disable-next-line import/no-unresolved
 import Accordeon from "@components/Accordeon";
 // eslint-disable-next-line import/no-unresolved
-import cascade from "@assets/cascade_eau.jpg";
+import mongolfieres from "@assets/mongolfieres.jpg";
 import "../App.css";
 
 export default function Themes() {
@@ -10,8 +10,8 @@ export default function Themes() {
     <div
       className="App"
       style={{
-        backgroundImage: `url(${cascade})`,
-        height: "1200px",
+        backgroundImage: `url(${mongolfieres})`,
+        backgroundAttachment: "fixed",
         backgroundSize: "cover",
       }}
     >

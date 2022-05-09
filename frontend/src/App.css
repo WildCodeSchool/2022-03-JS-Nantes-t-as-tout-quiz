@@ -1,10 +1,11 @@
 :root {
   --brown: #4c2719;
   --yellow: #ede580;
-  --cinabre : #d81702;
+  --cinabre: #d81702;
   --red: #d35269;
-  --beige: rgba(255,224,181,0.8);
+  --beige: rgba(255, 224, 181, 0.8);
   --white: #ffffff;
+  --green: #a4af69;
   --font-color: #000000;
   --second-font-color: #ffffff;
   --text-spacing: 1rem;
@@ -12,7 +13,9 @@
   --relative-spacing: 1%;
 }
 
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -22,6 +25,7 @@ body {
   min-height: 100%;
   min-width: 100%;
   font-size: medium;
+  font-family: cursive;
   opacity: 1;
 }
 

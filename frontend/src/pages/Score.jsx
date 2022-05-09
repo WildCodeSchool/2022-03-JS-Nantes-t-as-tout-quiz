@@ -5,7 +5,8 @@
 /* eslint-disable import/no-unresolved */
 import React, { useContext } from "react";
 import logoHome from "@assets/logo_home.png";
-import prairie from "@assets/prairieChampignons.jpg";
+import logoTheme from "@assets/list_theme.png";
+import pontTroncArbre from "@assets/pont_tronc_arbre.jpg";
 import "@components/NotificationMessage.css";
 import { NavLink } from "react-router-dom";
 import ScoreContext from "@components/ScoreContext";
@@ -16,7 +17,7 @@ function Score() {
     <div
       className="App"
       style={{
-        backgroundImage: `url(${prairie})`,
+        backgroundImage: `url(${pontTroncArbre})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
@@ -26,15 +27,27 @@ function Score() {
         {" "}
         Score <br /> {score} / 10{" "}
       </h2>
-      <div className="fondIcone">
-        <NavLink to="/">
-          <img
-            className="logoHome"
-            src={logoHome}
-            alt="logo d'une maison: permet le retour à la page d'accueil"
-            onClick={() => setScore(0)}
-          />
-        </NavLink>
+      <div className="boutonsScore">
+        <div className="fondIcone">
+          <NavLink to="/Themes">
+            <img
+              className="logoTheme"
+              src={logoTheme}
+              alt="logo qui permet le retour à la page thématique"
+              onClick={() => setScore(0)}
+            />
+          </NavLink>
+        </div>
+        <div className="fondIcone">
+          <NavLink to="/">
+            <img
+              className="logoHome"
+              src={logoHome}
+              alt="logo d'une maison: permet le retour à la page d'accueil"
+              onClick={() => setScore(0)}
+            />
+          </NavLink>
+        </div>
       </div>
     </div>
   );

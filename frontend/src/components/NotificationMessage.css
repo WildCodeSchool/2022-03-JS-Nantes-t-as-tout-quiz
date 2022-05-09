@@ -1,11 +1,14 @@
 main.App > section:nth-of-type(1) > h2.notifMsg {
-  width: clamp(calc(var(--text-spacing)*20), 100%, calc(var(--text-spacing)*40));
+  width: clamp(
+    calc(var(--text-spacing) * 20),
+    100%,
+    calc(var(--text-spacing) * 40)
+  );
   border-radius: 54.5px;
   background-color: var(--beige);
   color: var(--brown);
   font-size: xx-large;
 }
-
 main.App > section:nth-of-type(1) > div.fondIcone {
   padding: var(--text-spacing);
   border-radius: 13.62px;
@@ -13,6 +16,41 @@ main.App > section:nth-of-type(1) > div.fondIcone {
 }
 
 main.App > section:nth-of-type(1) > div.fondIcone > .navLink > img.logoHome {
-  width: clamp(calc(var(--text-spacing)*3), 100%, calc(var(--text-spacing)*6));
-  height: clamp(calc(var(--text-spacing)*3), 100%, calc(var(--text-spacing)*6));
+  width: clamp(
+    calc(var(--text-spacing) * 3),
+    100%,
+    calc(var(--text-spacing) * 6)
+  );
+  height: clamp(
+    calc(var(--text-spacing) * 3),
+    100%,
+    calc(var(--text-spacing) * 6)
+  );
+}
+
+.logoHome {
+  height: 4rem;
+}
+
+.logoTheme {
+  width: 4rem;
+}
+
+.fondIcone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 6rem;
+  border-radius: 15px;
+  background-color: var(--beige);
+  opacity: 0.8;
+}
+
+.boutonsScore {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  justify-content: space-between;
+  align-items: center;
 }
