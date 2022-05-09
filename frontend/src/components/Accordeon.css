@@ -12,7 +12,6 @@ button {
   border-radius: 10px;
   font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 600;
-  font-family: cursive;
   width: 400px;
   padding: 1.5rem 0;
 }
@@ -25,7 +24,11 @@ button {
 
 select {
   padding: calc(var(--text-spacing) * 1.25);
-  //width: clamp(calc(var(--text-spacing)*16), calc(var(--imagery-spacing)*100), (var(--text-spacing)*32));
+  width: clamp(
+    calc(var(--text-spacing) * 16),
+    calc(var(--imagery-spacing) * 100),
+    (var(--text-spacing) * 32)
+  );
   border-radius: 13.62px;
   background-color: var(--white);
   color: var(--brown);

@@ -16,6 +16,5 @@ nav h1 {
   color: var(--beige);
   text-align: center;
   width: 100%;
-  font-family: cursive;
   font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
