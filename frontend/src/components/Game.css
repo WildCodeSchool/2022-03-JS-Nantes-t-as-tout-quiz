@@ -76,6 +76,13 @@ body {
   border-radius: 54.5px;
   background-color: #ffe0b5;
 }
+.popup2 {
+  width: 500px;
+  height: 500px;
+  border-radius: 54.5px;
+  background-color: #ffe0b5;
+  padding: 0;
+}
 
 .swal-text {
   font-size: 2rem;
