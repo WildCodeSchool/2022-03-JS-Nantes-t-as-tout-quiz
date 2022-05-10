@@ -20,22 +20,16 @@ export default function Game() {
   const [proposition, setProposition] = useState("");
   const [questions, setQuestions] = useState({});
   const navigate = useNavigate();
-  function lastQuestion() {
-    navigate("/Score");
-    confetti();
-  }
   const getQuestion = () => {
     setQuestions(stockData[quiz][difficulte][questionNumber]);
   };
-  useEffect(() => {
-    if (questionNumber < 10) {
-      setQuestionNumber(questionNumber + 1);
-    } else {
-      lastQuestion();
-    }
-    if (proposition === questions.réponse) {
-      setScore(score + 1);
 
+  useEffect(() => {
+    if (
+      questionNumber < 10 &&
+      proposition === questions.réponse &&
+      proposition !== ""
+    ) {
       swal(
         `Bravo ! 
         
@@ -45,15 +39,85 @@ ${questions.anecdote}`,
         {
           button: {
             className: "swal-button",
-            closeModal: true,
           },
           className: "popup",
         }
-      );
+      )
+        .then(() => setQuestionNumber(questionNumber + 1))
+        .then(() => getQuestion())
+        .then(() => setScore(score + 1));
+    }
+    if (
+      questionNumber < 10 &&
+      proposition !== questions.réponse &&
+      proposition !== ""
+    ) {
+      swal(
+        `Dommage ! 
+        La réponse était :
+
+${questions.réponse}`,
+        {
+          icon: "error",
+          button: {
+            className: "swal-button",
+          },
+          className: "popup2",
+        }
+      )
+        .then(() => setQuestionNumber(questionNumber + 1))
+        .then(() => getQuestion());
+    }
+    if (questionNumber === 10 && proposition !== questions.réponse) {
+      swal(
+        `Dommage !
+          La réponse était :
+
+    ${questions.réponse}`,
+        {
+          icon: "error",
+          button: {
+            className: "swal-button",
+          },
+          className: "popup2",
+        }
+      )
+        .then(() => setQuestionNumber(questionNumber + 1))
+        .then(() => navigate("/score"))
+        .then(() => {
+          if (score > 5) {
+            confetti();
+          }
+        });
+    }
+    if (questionNumber === 10 && proposition === questions.réponse) {
+      swal(
+        `Bravo ! 
+        
+        Le savais-tu ?
+
+${questions.anecdote}`,
+        {
+          button: {
+            className: "swal-button",
+          },
+          className: "popup",
+        }
+      )
+        .then(() => setScore(score + 1))
+        .then(() => navigate("/score"))
+        .then(() => {
+          if (score > 5) {
+            confetti();
+          }
+        });
     }
   }, [proposition]);
 
-  useEffect(() => getQuestion(), [proposition]);
+  useEffect(() => {
+    setQuestionNumber(questionNumber + 1);
+    getQuestion();
+  }, []);
 
   return (
     <div
