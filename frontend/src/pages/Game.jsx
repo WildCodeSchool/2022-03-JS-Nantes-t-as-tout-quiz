@@ -4,6 +4,7 @@
 import AnswerButton from "@components/AnswerButton";
 import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
+import CountDownContext from "@components/CountDownContext";
 import "@components/Game.css";
 import "@components/countdown.css";
 import React, { useState, useEffect, useContext } from "react";
@@ -12,10 +13,12 @@ import { useNavigate } from "react-router-dom";
 import { stockData } from "@pages/data";
 import swal from "sweetalert";
 import confetti from "https://cdn.skypack.dev/canvas-confetti";
+import CountDown from "@components/CountDown";
 
 export default function Game() {
   const [questionNumber, setQuestionNumber] = useState(0);
   const { score, setScore } = useContext(ScoreContext);
+  const { count, setCount } = useContext(CountDownContext);
   const { quiz, difficulte } = useContext(QuizContext);
   const [proposition, setProposition] = useState("");
   const [questions, setQuestions] = useState({});
@@ -25,11 +28,30 @@ export default function Game() {
   };
 
   useEffect(() => {
+    if (count === 0) {
+      swal(`Time up`)
+        .then(() => setQuestionNumber(questionNumber + 1))
+        .then(() => getQuestion())
+        .then(() => setCount(10));
+    }
+    if (count === 0 && questionNumber === 10) {
+      swal(`Time up`)
+        .then(() => navigate("/score"))
+        .then(() => {
+          if (score > 5) {
+            confetti();
+          }
+        });
+    }
+  }, [count]);
+
+  useEffect(() => {
     if (
       questionNumber < 10 &&
       proposition === questions.réponse &&
       proposition !== ""
     ) {
+      setCount(null);
       swal(
         `Bravo ! 
         
@@ -43,9 +65,10 @@ ${questions.anecdote}`,
           className: "popup",
         }
       )
+        .then(() => setCount(10))
         .then(() => setQuestionNumber(questionNumber + 1))
-        .then(() => getQuestion())
-        .then(() => setScore(score + 1));
+        .then(() => setScore(score + 1))
+        .then(() => getQuestion());
     }
     if (
       questionNumber < 10 &&
@@ -65,6 +88,7 @@ ${questions.réponse}`,
           className: "popup2",
         }
       )
+        .then(() => setCount(10))
         .then(() => setQuestionNumber(questionNumber + 1))
         .then(() => getQuestion());
     }
@@ -115,6 +139,8 @@ ${questions.anecdote}`,
   }, [proposition]);
 
   useEffect(() => {
+    setScore(0);
+    setCount(10);
     setQuestionNumber(questionNumber + 1);
     getQuestion();
   }, []);
@@ -133,7 +159,7 @@ ${questions.anecdote}`,
       <p className="question">
         {questions.question ? questions.question : ""}{" "}
       </p>
-
+      <CountDown />
       <h1 className="scoring">{questionNumber} / 10</h1>
       <AnswerButton
         className="button answ-one"

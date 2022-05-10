@@ -2,7 +2,6 @@
 import Bouton from "@components/Bouton";
 import "../App.css";
 import "./Home.css";
-import "../components/countdown.css";
 import prairie from "@assets/prairieChampignons.jpg";
 import { Link } from "react-router-dom";
 import logoToto from "@assets/logo_toto.png";
