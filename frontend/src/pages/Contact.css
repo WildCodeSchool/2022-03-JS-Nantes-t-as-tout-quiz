@@ -71,7 +71,7 @@ main.App > section:nth-of-type(1) > form > div > textarea::placeholder {
 main.App > section > form > div > .navLink > input.inputSubmit {
   padding: var(--text-spacing) calc(var(--text-spacing) * 4) var(--text-spacing)
     calc(var(--text-spacing) * 4);
-  //width: clamp(calc(var(--imagery-spacing)*4), calc(var(--relative-spacing)*100), (var(--imagery-spacing)*24));
+  width: clamp(calc(var(--imagery-spacing)*4), calc(var(--relative-spacing)*100), (var(--imagery-spacing)*24));
   border: none;
   border-radius: 13.62px;
   background-color: var(--brown);

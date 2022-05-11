@@ -1,5 +1,124 @@
+/* eslint-disable no-dupe-keys */
 /* eslint-disable import/prefer-default-export */
 export const stockData = {
+  "Quiz pour les nuls": {
+    débutant: [
+      {
+        id: 1,
+        question: "Le langage binaire est composé ?",
+        propositions: [
+          "De lettres",
+          "Du truc dans Matrix",
+          "De chiffres de 0 à 9",
+          "De chiffres 1 et 0",
+        ],
+        réponse: "De chiffres 1 et 0",
+        anecdote:
+          "Langage incompréhensible par le commun des mortels (sauf Néo) le langage binaire est composé de 0 et de 1.",
+      },
+      {
+        id: 2,
+        question: "La programmation, c'est ?",
+        propositions: [
+          "Un langage inconnu pour les datas",
+          "Un télé-magazine",
+          "La réalisation d'un programme",
+          "Une incantation démoniaque",
+        ],
+        réponse: "La réalisation d'un programme",
+        anecdote:
+          "La programmation, en général produite par un programmeur (et non programmateur).",
+      },
+      {
+        id: 3,
+        question: "Quelles sont les chaussettes préférées de Karl ?",
+        propositions: [
+          "Les chaussettes php avec les petits éléphants",
+          "Des chaussettes de ski",
+          "Les chaussettes à trous, plus aérés !",
+          "Il porte des chaussettes ?",
+        ],
+        réponse: "Les chaussettes php avec les petits éléphants",
+        anecdote:
+          "Jamais trouées ou dépareillées, Karl ne sort jamais sans ses plus belles chaussettes.",
+      },
+      {
+        id: 5,
+        question: "Quel est le nom de notre tatou ?",
+        propositions: ["Tutu", "Tata", "Toto", "Titi"],
+        réponse: "Toto",
+        anecdote:
+          "Notre mascotte Toto le tatou nous a été inspiré par un grand sage expert en langages obscurs",
+      },
+      {
+        id: 6,
+        question: "Quel est l'acronyme de Wild Code School ?",
+        propositions: ["WRC", "W3C", "WCS", "WWF"],
+        réponse: "WCS",
+        anecdote: "At school we code without shoes",
+      },
+      {
+        id: 4,
+        question: "Quel lourd secret cache notre formateur Karl ?",
+        propositions: [
+          "Il a la bible du code pour les nuls sur sa table de chevet",
+          "C'est un papâtissier",
+          "C'est Batman",
+          "Il est quintuple champion de Judo",
+        ],
+        réponse: "C'est un papâtissier",
+        anecdote:
+          "Toujours son mini-fouet en poche, Karl est toujours prêt à faire des gateaux même si on en a jamais vu la couleur...",
+      },
+      {
+        id: 7,
+        question: "Qu'est-ce qu'un `\"data\"` ?",
+        propositions: [
+          "Un animal sauvage",
+          'Une contraction de `"Data analyst"`',
+          "Un nom de groupe folkorique",
+          "Une donnée",
+        ],
+        réponse: 'Une contraction de `"Data analyst"`',
+        anecdote:
+          "Le data est un être étrange qui erre dans les locaux de la wild à la cherche de données.",
+      },
+      {
+        id: 8,
+        question: "Qu'est-ce qu'un Kahoot ?",
+        propositions: [
+          "Un plat indigeste",
+          "Un art martial",
+          "Le cri d'un data",
+          "Le concurrent du Tatou Quiz",
+        ],
+        réponse: "Le concurrent du Tatou Quiz",
+        anecdote:
+          "Aussi appelé l'\"Ascenseur Emotionnel\", le Kahoot sert généralement d'exhutoire à un formateur sadique.",
+      },
+      {
+        id: 9,
+        question: "Qu'est-ce qu'une API ?",
+        propositions: [
+          "Une pomme",
+          "Un alphabet",
+          "Un acronyme chelou anglais",
+          "C'est pas IPA ?",
+        ],
+        réponse: "Un acronyme chelou anglais",
+        anecdote: "IPA en français, Interface de Programmation d'Application.",
+      },
+      {
+        id: 10,
+        question: "Qu'est-ce que l'univers ?",
+        propositions: ["L'uni-quoi ?", "42", "La maison d'ET", "Undefined"],
+        réponse: "42",
+        anecdote:
+          "42, est la réponse à La grande question sur la vie, l'univers et tout le reste..",
+      },
+    ],
+  },
+
   animaux: {
     débutant: [
       {

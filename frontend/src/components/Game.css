@@ -105,8 +105,13 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .popup {
+    width: 300px;
+    height: 350px;
+    padding: 0px;
+  }
+  .popup2 {
     width: 300px;
     height: 350px;
     padding: 0px;

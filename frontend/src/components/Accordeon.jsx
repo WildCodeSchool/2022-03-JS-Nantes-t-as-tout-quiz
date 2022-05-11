@@ -9,6 +9,11 @@ function Accordeon() {
   return (
     <div className="dropdown">
       <AccordeonDetail
+        themeName="Quiz pour les nuls"
+        quizTheme="Quiz pour les nuls"
+        themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
+      />
+      <AccordeonDetail
         themeName="Animaux"
         quizTheme="animaux"
         themes={["Débutant⭐", "Confirmé⭐⭐", "Expert⭐⭐⭐"]}
