@@ -4,40 +4,176 @@
 import AnswerButton from "@components/AnswerButton";
 import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
+import CountDownContext from "@components/CountDownContext";
 import "@components/Game.css";
+import "@components/countdown.css";
 import React, { useState, useEffect, useContext } from "react";
 import cascade from "@assets/cascade_eau.jpg";
 import { useNavigate } from "react-router-dom";
 import { stockData } from "@pages/data";
+import swal from "sweetalert";
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
+import CountDown from "@components/CountDown";
 
 export default function Game() {
   const [questionNumber, setQuestionNumber] = useState(0);
   const { score, setScore } = useContext(ScoreContext);
+  const { count, setCount } = useContext(CountDownContext);
   const { quiz, difficulte } = useContext(QuizContext);
   const [proposition, setProposition] = useState("");
   const [questions, setQuestions] = useState({});
   const navigate = useNavigate();
-  function lastQuestion() {
-    navigate("/Score");
-  }
   const getQuestion = () => {
     setQuestions(stockData[quiz][difficulte][questionNumber]);
   };
+
   useEffect(() => {
-    if (questionNumber < 10) {
-      setQuestionNumber(questionNumber + 1);
-    } else {
-      lastQuestion();
+    if (count === 0) {
+      setCount(null);
+      swal(`Time up`)
+        .then(() => setQuestionNumber(questionNumber + 1))
+        .then(() => getQuestion())
+        .then(() => setCount(10));
     }
-    if (proposition === questions.réponse) {
-      setScore(score + 1);
+    if (count === 0 && questionNumber === 10) {
+      setCount(null);
+      swal(`Time up`)
+        .then(() => navigate("/score"))
+        .then(() => {
+          if (score > 5) {
+            confetti({
+              particleCount: 1000,
+              spread: 300,
+              angle: 100,
+              startVelocity: 75,
+              shapes: ["square", "circle", "square"],
+              colors: ["F4F700", "FF5733", "00ECF7", "F700D9"],
+              gravity: 0.4,
+            });
+          }
+        });
+    }
+  }, [count]);
 
-      alert(`Bravo ! Le savais-tu ?
+  useEffect(() => {
+    if (
+      questionNumber < 10 &&
+      proposition === questions.réponse &&
+      proposition !== ""
+    ) {
+      setCount(null);
+      swal(
+        `Bravo ! 
+        
+        Le savais-tu ?
 
-${questions.anecdote}`);
+${questions.anecdote}`,
+        {
+          button: {
+            className: "swal-button",
+          },
+          className: "popup",
+        }
+      )
+        .then(() => setCount(10))
+        .then(() => setQuestionNumber(questionNumber + 1))
+        .then(() => setScore(score + 1))
+        .then(() => getQuestion());
+    }
+    if (
+      questionNumber < 10 &&
+      proposition !== questions.réponse &&
+      proposition !== ""
+    ) {
+      setCount(null);
+      swal(
+        `Dommage ! 
+        La réponse était :
+
+${questions.réponse}`,
+        {
+          icon: "error",
+          button: {
+            className: "swal-button",
+          },
+          className: "popup2",
+        }
+      )
+        .then(() => setCount(10))
+        .then(() => setQuestionNumber(questionNumber + 1))
+        .then(() => getQuestion());
+    }
+    if (questionNumber === 10 && proposition !== questions.réponse) {
+      setCount(null);
+      swal(
+        `Dommage !
+          La réponse était :
+
+    ${questions.réponse}`,
+        {
+          icon: "error",
+          button: {
+            className: "swal-button",
+          },
+          className: "popup2",
+        }
+      )
+        .then(() => setQuestionNumber(questionNumber + 1))
+        .then(() => navigate("/score"))
+        .then(() => {
+          if (score > 5) {
+            confetti({
+              particleCount: 1000,
+              spread: 300,
+              angle: 100,
+              startVelocity: 75,
+              shapes: ["square", "circle", "square"],
+              colors: ["F4F700", "FF5733", "00ECF7", "F700D9"],
+              gravity: 0.4,
+            });
+          }
+        });
+    }
+    if (questionNumber === 10 && proposition === questions.réponse) {
+      setCount(null);
+      swal(
+        `Bravo ! 
+        
+        Le savais-tu ?
+
+${questions.anecdote}`,
+        {
+          button: {
+            className: "swal-button",
+          },
+          className: "popup",
+        }
+      )
+        .then(() => setScore(score + 1))
+        .then(() => navigate("/score"))
+        .then(() => {
+          if (score > 5) {
+            confetti({
+              particleCount: 1000,
+              spread: 300,
+              angle: 100,
+              startVelocity: 75,
+              shapes: ["square", "circle", "square"],
+              colors: ["F4F700", "FF5733", "00ECF7", "F700D9"],
+              gravity: 0.4,
+            });
+          }
+        });
     }
   }, [proposition]);
-  useEffect(() => getQuestion(), [proposition]);
+
+  useEffect(() => {
+    setScore(0);
+    setCount(10);
+    setQuestionNumber(questionNumber + 1);
+    getQuestion();
+  }, []);
+
   return (
     <div
       className="App"
@@ -52,6 +188,7 @@ ${questions.anecdote}`);
       <p className="question">
         {questions.question ? questions.question : ""}{" "}
       </p>
+      <CountDown />
       <h1 className="scoring">{questionNumber} / 10</h1>
       <AnswerButton
         className="button answ-one"

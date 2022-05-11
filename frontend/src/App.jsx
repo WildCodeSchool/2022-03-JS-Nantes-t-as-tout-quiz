@@ -12,6 +12,7 @@ import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import CountDownContext from "@components/CountDownContext";
 
 import "./App.css";
 import "./pages/Home.css";
@@ -21,6 +22,7 @@ import React, { useState, useEffect } from "react";
 
 function App() {
   const [score, setScore] = useState(0);
+  const [count, setCount] = useState(10);
   const [quiz, setQuiz] = useState("");
   const [difficulte, setDifficulte] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -38,25 +40,27 @@ function App() {
           <ClimbingBoxLoader color="#FFE0B5" isLoading={isLoading} size={50} />
         </div>
       ) : null}
-      <ScoreContext.Provider value={{ score, setScore }}>
-        <QuizContext.Provider
-          value={{ quiz, setQuiz, difficulte, setDifficulte }}
-        >
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Regles" element={<Regles />} />
-            <Route path="/Game" element={<Game />} />
-            <Route path="/Score" element={<Score />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="/Themes" element={<Themes />} />
-            <Route
-              path="/NotificationMessage"
-              element={<NotificationMessage />}
-            />
-          </Routes>
-        </QuizContext.Provider>
-      </ScoreContext.Provider>
+      <CountDownContext.Provider value={{ count, setCount }}>
+        <ScoreContext.Provider value={{ score, setScore }}>
+          <QuizContext.Provider
+            value={{ quiz, setQuiz, difficulte, setDifficulte }}
+          >
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/Regles" element={<Regles />} />
+              <Route path="/Game" element={<Game />} />
+              <Route path="/Score" element={<Score />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/Themes" element={<Themes />} />
+              <Route
+                path="/NotificationMessage"
+                element={<NotificationMessage />}
+              />
+            </Routes>
+          </QuizContext.Provider>
+        </ScoreContext.Provider>
+      </CountDownContext.Provider>
     </div>
   );
 }
