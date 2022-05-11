@@ -8,7 +8,6 @@ body {
 }
 
 .button {
-  all: unset;
   cursor: pointer;
   padding: var(--text-spacing);
   margin: 0 0 var(--imagery-spacing) 0;
@@ -72,9 +71,10 @@ body {
 
 .popup {
   width: 800px;
-  height: 500px;
+  height: 550px;
   border-radius: 54.5px;
   background-color: #ffe0b5;
+  padding: 0 20px;
 }
 .popup2 {
   width: 500px;
@@ -85,13 +85,28 @@ body {
 }
 
 .swal-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
 }
 
+/* Sert à annuler le hover bleu initial du bouton dans la popup swal */
+
 .swal-button:not([disabled]):hover {
   background-color: var(--brown);
+}
+
+/* Correction bug fond blanc icon success popup swal */
+
+.swal-icon--success__hide-corners {
+  width: 0;
+  height: 0;
+}
+
+/* Correction bug fond blanc icon success popup swal */
+
+.swal-icon--success::after, .swal-icon--success::before {
+  display: none;
 }
 
 .swal-button {
@@ -108,15 +123,15 @@ body {
 @media screen and (max-width: 420px) {
   .popup {
     width: 300px;
-    height: 350px;
+    height: 460px;
     padding: 0px;
   }
   .popup2 {
     width: 300px;
-    height: 350px;
+    height: 400px;
     padding: 0px;
   }
   .swal-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }

@@ -3,6 +3,7 @@ body {
 }
 
 .bigButton {
+  cursor: pointer;
   height: 7rem;
   width: 21rem;
   border-radius: 54.5px;
@@ -12,6 +13,7 @@ body {
 }
 
 .smallButton {
+  cursor: pointer;
   height: 3.5rem;
   width: 11rem;
   border-radius: 54.5px;
