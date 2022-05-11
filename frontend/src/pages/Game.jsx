@@ -29,17 +29,27 @@ export default function Game() {
 
   useEffect(() => {
     if (count === 0) {
+      setCount(null);
       swal(`Time up`)
         .then(() => setQuestionNumber(questionNumber + 1))
         .then(() => getQuestion())
         .then(() => setCount(10));
     }
     if (count === 0 && questionNumber === 10) {
+      setCount(null);
       swal(`Time up`)
         .then(() => navigate("/score"))
         .then(() => {
           if (score > 5) {
-            confetti();
+            confetti({
+              particleCount: 1000,
+              spread: 300,
+              angle: 100,
+              startVelocity: 75,
+              shapes: ["square", "circle", "square"],
+              colors: ["F4F700", "FF5733", "00ECF7", "F700D9"],
+              gravity: 0.4,
+            });
           }
         });
     }
@@ -75,6 +85,7 @@ ${questions.anecdote}`,
       proposition !== questions.réponse &&
       proposition !== ""
     ) {
+      setCount(null);
       swal(
         `Dommage ! 
         La réponse était :
@@ -93,6 +104,7 @@ ${questions.réponse}`,
         .then(() => getQuestion());
     }
     if (questionNumber === 10 && proposition !== questions.réponse) {
+      setCount(null);
       swal(
         `Dommage !
           La réponse était :
@@ -110,11 +122,20 @@ ${questions.réponse}`,
         .then(() => navigate("/score"))
         .then(() => {
           if (score > 5) {
-            confetti();
+            confetti({
+              particleCount: 1000,
+              spread: 300,
+              angle: 100,
+              startVelocity: 75,
+              shapes: ["square", "circle", "square"],
+              colors: ["F4F700", "FF5733", "00ECF7", "F700D9"],
+              gravity: 0.4,
+            });
           }
         });
     }
     if (questionNumber === 10 && proposition === questions.réponse) {
+      setCount(null);
       swal(
         `Bravo ! 
         
@@ -132,7 +153,15 @@ ${questions.anecdote}`,
         .then(() => navigate("/score"))
         .then(() => {
           if (score > 5) {
-            confetti();
+            confetti({
+              particleCount: 1000,
+              spread: 300,
+              angle: 100,
+              startVelocity: 75,
+              shapes: ["square", "circle", "square"],
+              colors: ["F4F700", "FF5733", "00ECF7", "F700D9"],
+              gravity: 0.4,
+            });
           }
         });
     }

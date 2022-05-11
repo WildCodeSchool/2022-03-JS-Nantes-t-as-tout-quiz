@@ -19,10 +19,13 @@ export default function Regles() {
         <h3>🎯 Principe</h3>
         <p>
           L&apos;ensemble des questions du <b>T&apos;As Tout Quiz</b> sont
-          disponibles en appuyant sur le bouton <b>« JOUER »</b>. Choisissez
-          parmi une des <b>thématiques</b> proposées, en fonction de son niveau
-          de <b>difficulté</b>, et le <b>quiz</b> se lancera ensuite. <br />
-          Hésite pas à cliquer sur notre tatou pour revenir à la page
+          disponibles en appuyant sur le bouton <b>« JOUER »</b>. Choisis parmi
+          une des <b>thématiques</b> proposées, en fonction de son niveau de{" "}
+          <b>difficulté</b>, et le <b>quiz</b> se lancera ensuite.
+          <p>
+            🔥 <b>Attention :</b> Tu n&apos;as que 10 secondes par question !
+          </p>
+          N&apos;hésite pas à cliquer sur notre tatou pour revenir à la page
           d&apos;accueil !
         </p>
       </div>
