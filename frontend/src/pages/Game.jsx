@@ -30,25 +30,40 @@ export default function Game() {
   useEffect(() => {
     if (count === 0) {
       setCount(null);
-      swal(`Time up`)
+      swal(
+        `Time up !     
+
+      La réponse était :
+
+      ${questions.réponse}`,
+        { className: "popup2", icon: "error" }
+      )
         .then(() => setQuestionNumber(questionNumber + 1))
         .then(() => getQuestion())
         .then(() => setCount(10));
     }
     if (count === 0 && questionNumber === 10) {
       setCount(null);
-      swal(`Time up`)
+      swal(
+        `Time up !
+
+      La réponse était :
+
+      ${questions.réponse}`,
+        { className: "popup2", icon: "error" }
+      )
         .then(() => navigate("/score"))
         .then(() => {
           if (score > 5) {
             confetti({
               particleCount: 1000,
-              spread: 300,
+              spread: 150,
               angle: 100,
               startVelocity: 75,
               shapes: ["square", "circle", "square"],
               colors: ["F4F700", "FF5733", "00ECF7", "F700D9"],
               gravity: 0.4,
+              origin: { x: 550, y: 750 },
             });
           }
         });
@@ -68,12 +83,7 @@ export default function Game() {
         Le savais-tu ?
 
 ${questions.anecdote}`,
-        {
-          button: {
-            className: "swal-button",
-          },
-          className: "popup",
-        }
+        { icon: "success", className: "popup" }
       )
         .then(() => setCount(10))
         .then(() => setQuestionNumber(questionNumber + 1))
@@ -143,6 +153,7 @@ ${questions.réponse}`,
 
 ${questions.anecdote}`,
         {
+          icon: "success",
           button: {
             className: "swal-button",
           },

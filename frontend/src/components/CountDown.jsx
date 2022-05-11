@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { useEffect, useContext } from "react";
 import "./countdown.css";
 import CountDownContext from "@components/CountDownContext";

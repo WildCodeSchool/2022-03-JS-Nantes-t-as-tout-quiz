@@ -72,14 +72,14 @@ export const stockData = {
       },
       {
         id: 7,
-        question: "Qu'est-ce qu'un `\"data\"` ?",
+        question: "Qu'est-ce qu'un \"data\" ?",
         propositions: [
           "Un animal sauvage",
-          'Une contraction de `"Data analyst"`',
+          'Une contraction de "Data analyst"',
           "Un nom de groupe folkorique",
           "Une donnée",
         ],
-        réponse: 'Une contraction de `"Data analyst"`',
+        réponse: 'Une contraction de "Data analyst"',
         anecdote:
           "Le data est un être étrange qui erre dans les locaux de la wild à la cherche de données.",
       },
@@ -94,7 +94,7 @@ export const stockData = {
         ],
         réponse: "Le concurrent du Tatou Quiz",
         anecdote:
-          "Aussi appelé l'\"Ascenseur Emotionnel\", le Kahoot sert généralement d'exhutoire à un formateur sadique.",
+          "Aussi appelé \"l'Ascenseur Emotionnel\", le Kahoot sert généralement d'exhutoire à un formateur sadique.",
       },
       {
         id: 9,
