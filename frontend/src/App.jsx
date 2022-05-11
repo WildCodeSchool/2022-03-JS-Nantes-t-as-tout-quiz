@@ -10,19 +10,34 @@ import Contact from "@pages/Contact";
 import NotificationMessage from "@components/NotificationMessage";
 import ScoreContext from "@components/ScoreContext";
 import QuizContext from "@components/QuizContext";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 import "./App.css";
 import "./pages/Home.css";
 import "@components/Header.css";
 import Themes from "@pages/Themes";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [score, setScore] = useState(0);
   const [quiz, setQuiz] = useState("");
   const [difficulte, setDifficulte] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
   return (
     <div>
+      {isLoading ? (
+        <div className="loader">
+          <ClimbingBoxLoader color="#FFE0B5" isLoading={isLoading} size={50} />
+        </div>
+      ) : null}
       <ScoreContext.Provider value={{ score, setScore }}>
         <QuizContext.Provider
           value={{ quiz, setQuiz, difficulte, setDifficulte }}
