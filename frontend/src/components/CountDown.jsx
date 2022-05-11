@@ -2,7 +2,6 @@ import React, { useEffect, useContext } from "react";
 import "./countdown.css";
 import CountDownContext from "@components/CountDownContext";
 
-// eslint-disable-next-line react/prop-types
 function CountDown() {
   const { count, setCount } = useContext(CountDownContext);
   useEffect(() => {
